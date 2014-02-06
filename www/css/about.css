@@ -1,4 +1,51 @@
 /**
+ *
  *	About page styles
- *	@main
+ *
  */
+
+.sub-menu-wrap{
+	width: 100%;
+	margin: 50px 0 20px;
+	overflow: hidden;
+}
+.sub-menu-wrap li{
+	float: left;
+	margin: 0 12px;
+}
+.sub-menu-wrap li a{
+	line-height: 18px;
+	font-size: 18px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.sub-menu-wrap li.selected a{
+	font-weight: bold;
+	color: #34B4AC;
+}
+
+.about-block h2{
+	font-size: 35px;
+	font-weight: normal;
+	margin: 40px 0 20px;
+}
+.about-block p{
+	margin-bottom: 10px;
+}
+.dl-present-wrap{
+	margin: 30px 0;
+}
+.dl-present-btn{
+	display: block;
+	margin: 0 auto;
+	width: 247px;
+	height: 47px;
+	line-height: 47px;
+	text-align: center;
+	color: #FFF;
+	font-size: 19px;
+	background: url(/img/sprites.png) 0 -3211px no-repeat;
+}
+.dl-present-btn:hover{
+	background-position: 0 -3263px;
+}
