@@ -1,0 +1,70 @@
+/**
+ *
+ *	Define fonts
+ *
+ */
+
+@font-face {
+	font-family: 'HelveticaNeueCyr-Black';
+	src: url(/font/HelveticaNeueCyr-Black.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-BlackItalic';
+	src: url(/font/HelveticaNeueCyr-BlackItalic.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-Bold';
+	src: url(/font/HelveticaNeueCyr-Bold.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-BoldItalic';
+	src: url(/font/HelveticaNeueCyr-BoldItalic.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-Heavy';
+	src: url(/font/HelveticaNeueCyr-Heavy.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-HeavyItalic';
+	src: url(/font/HelveticaNeueCyr-HeavyItalic.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-Italic';
+	src: url(/font/HelveticaNeueCyr-Italic.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-Light';
+	src: url(/font/HelveticaNeueCyr-Light.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-LightItalic';
+	src: url(/font/HelveticaNeueCyr-LightItalic.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-Medium';
+	src: url(/font/HelveticaNeueCyr-Medium.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-MediumItaicl';
+	src: url(/font/HelveticaNeueCyr-MediumItaicl.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-Roman';
+	src: url(/font/HelveticaNeueCyr-Roman.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-Thin';
+	src: url(/font/HelveticaNeueCyr-Thin.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-ThinItalic';
+	src: url(/font/HelveticaNeueCyr-ThinItalic.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-UltraLight';
+	src: url(/font/HelveticaNeueCyr-UltraLight.otf);
+}
+@font-face {
+	font-family: 'HelveticaNeueCyr-UltraLightItalic';
+	src: url(/font/HelveticaNeueCyr-UltraLightItalic.otf);
+}
