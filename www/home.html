@@ -7,9 +7,71 @@
 	<link rel="stylesheet" type="text/css" href="/css/main.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/home.css"/>
 	<script type="text/javascript" src="/lib/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="/plugin/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="/plugin/bubbles.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 	<script type="text/javascript" src="/js/home.js"></script>
+	<style type="text/css">
+
+		.mCSB_container {
+			width: auto;
+			margin-right: 30px;
+			overflow: hidden;
+		}
+		.mCSB_container.mCS_no_scrollbar {
+			margin-right: 0;
+		}
+		.mCustomScrollBox {
+			-ms-touch-action: none;
+			/*MSPointer events - direct all pointer events to js*/
+
+		}
+		.mCustomScrollBox > .mCSB_scrollTools {
+			width: 10px;
+			height: 100%;
+			top: 0;
+			right: 0;
+		}
+		.mCustomScrollBox > .mCSB_scrollTools .mCSB_draggerContainer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			height: auto;
+		}
+		.mCustomScrollBox > .mCSB_scrollTools .mCSB_draggerRail {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			behavior: url(/css/css3pie/PIE.htc);
+			background: #7e1e1a;
+			/* rgba fallback */
+
+			background: rgba(126, 30, 26, 0.2);
+			filter: "alpha(opacity=20)";
+			-ms-filter: "alpha(opacity=20)";
+		}
+		.mCustomScrollBox > .mCSB_scrollTools .mCSB_dragger {
+			cursor: pointer;
+			width: 100%;
+		}
+		.mCustomScrollBox > .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			behavior: url(/css/css3pie/PIE.htc);
+			text-align: center;
+			background: rgba(255, 255, 255, 0.8);
+		}
+	</style>
 </head>
 <body>
 <div class="container">

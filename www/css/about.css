@@ -12,7 +12,7 @@
 .sub-menu-wrap li{
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 15px;
+	margin: 0 14px;
 }
 .sub-menu-wrap li a{
 	line-height: 18px;
@@ -25,6 +25,10 @@
 	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
 	color: #34B4AC;
 }
+.sub-menu-wrap li a:hover{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
 
 .about-block h1{
 	font-size: 35px;
@@ -33,6 +37,7 @@
 }
 .about-block p{
 	font-size: 15px;
+	line-height: 20px;
 	margin-bottom: 10px;
 }
 .dl-present-wrap{

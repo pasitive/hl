@@ -5,22 +5,74 @@ var countAvailHeight = function(){
 document.write('<style type="text/css">.full-height{min-height: ' + countAvailHeight() + 'px;}</style>');
 
 $(function(){
+	$(document).bind('mousewheel', function(e, delta){
+		e.preventDefault();
+		if(!isScroll){
+			isScroll = true;
+			var currentBox = $('[data-view="true"]'),
+				newBox;
+
+			if(delta < 0){
+				newBox = currentBox.next('.full-height');
+				if(newBox.length){
+					currentBox.attr('data-view', 'false');
+					newBox.attr('data-view', 'true').scrollTo(function(){
+						isScroll = false;
+					});
+				} else {
+					isScroll = false;
+				}
+			} else {
+				newBox = currentBox.prev('.full-height');
+				if(newBox.length){
+					currentBox.attr('data-view', 'false');
+					newBox.attr('data-view', 'true').scrollTo(function(){
+						isScroll = false;
+					});
+				} else {
+					isScroll = false;
+				}
+
+			}
+		}
+	});
+
 	/*var lastScrollTop = 0;
 
-	$(window).scroll(function(){
-		var st = $(this).scrollTop(),
-			currentBox = $('[data-view="true"]'),
-			newBox;
-		if (st > lastScrollTop){
-			newBox = currentBox.next('.full-height');
-			currentBox.attr('data-view', 'false');
-			newBox.attr('data-view', 'true').scrollTo();
-		} else {
-			newBox = currentBox.prev('.full-height');
-			currentBox.attr('data-view', 'false');
-			newBox.attr('data-view', 'true').scrollTo();
+	$(window).scroll(function(e){
+		if(!isScroll){
+			e.preventDefault();
+			isScroll = true;
+			var st = $('html, body').scrollTop(),
+				currentBox = $('[data-view="true"]'),
+				newBox;
+			if (st > lastScrollTop){
+				newBox = currentBox.next('.full-height');
+				if(newBox.length){
+					currentBox.attr('data-view', 'false');
+					newBox.attr('data-view', 'true').scrollTo(function(){
+						setTimeout(function(){
+							isScroll = false;
+						}, 50);
+					});
+				} else {
+					isScroll = false;
+				}
+			} else {
+				newBox = currentBox.prev('.full-height');
+				if(newBox.length){
+					currentBox.attr('data-view', 'false');
+					newBox.attr('data-view', 'true').scrollTo(function(){
+						setTimeout(function(){
+							isScroll = false;
+						}, 50);
+					});
+				} else {
+					isScroll = false;
+				}
+			}
+			lastScrollTop = st;
 		}
-		lastScrollTop = st;
 	});*/
 
 	$(window).bind('resize', function(){

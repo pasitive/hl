@@ -1,14 +1,18 @@
-$.fn.scrollTo = function() {
-	var isAnimate = false,
-		offsetTop = $(this).offset().top,
-		headerHeight = $('.header').outerHeight();
+var isAnimate = false,
+	isScroll = false;
 
+$.fn.scrollTo = function(callback) {
 	if(!isAnimate){
 		isAnimate = true;
+
+	var offsetTop = $(this).offset().top,
+		headerHeight = $('.header').outerHeight();
+
 		$('body, html').animate({
 			scrollTop : offsetTop - headerHeight
 		}, function(){
 			isAnimate = false;
+			callback && callback();
 		});
 	}
 };
