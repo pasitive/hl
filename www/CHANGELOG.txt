@@ -2,7 +2,8 @@
 
 HTML/CSS:
 
-- home page contact form layout
+home page
+- contact form layout
 
 JS:
 
@@ -12,3 +13,19 @@ JS:
 - Custom placeholder solution
 - Custom scrollbar solution
 - Submenu prevent width changing solution
+
+
+12.02.2014
+
+HTML/CSS
+
+common
+- "order call" popup
+
+home page
+- "our works" layout
+
+JS:
+
+- Portfolio sliding solution
+- Portfolio items appearance solution

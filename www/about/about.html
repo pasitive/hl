@@ -7,6 +7,13 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css"/>
         <link rel="stylesheet" type="text/css" href="/css/about.css"/>
 		<script type="text/javascript" src="/lib/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript" src="/plugin/jquery.selectbox-0.2.min.js"></script>
+		<script type="text/javascript" src="/plugin/jquery.placeholder.min.js"></script>
+		<script type="text/javascript" src="/plugin/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="/plugin/jquery.cycle.plugin.js"></script>
+		<script type="text/javascript" src="/plugin/jquery.cs.js"></script>
+		<script type="text/javascript" src="/plugin/bubbles.js"></script>
 		<script type="text/javascript" src="/js/main.js"></script>
     </head>
     <body>
@@ -216,5 +223,26 @@
 				</div>
             </div>
         </div>
+		<div class="overlay"></div>
+		<div class="popup-wrap">
+			<div class="popup">
+				<form action="" method="post">
+					<h3>Заказать звонок</h3>
+					<div class="required">
+						<input name="contact" type="text" placeholder="Контактное лицо"/>
+					</div>
+					<div class="required">
+						<input name="phone" type="text" placeholder="Телефон"/>
+					</div>
+					<div class="textarea-wrap">
+						<textarea name="order" id="order" placeholder="Цель проекта"></textarea>
+					</div>
+					<div class="required-text"><span class="required">— поля обязательные для заполнения<span></div>
+					<div class="submit-btn-wrap">
+						<input type="submit" value="Заказать"/>
+					</div>
+				</form>
+			</div>
+		</div>
     </body>
 </html>

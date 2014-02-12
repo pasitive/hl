@@ -417,18 +417,6 @@ label[for="service"]{
 	float: left;
 	margin-left: 60px;
 }
-.textarea-wrap{
-	width: 500px;
-	margin: 15px 0;
-	padding: 5px 15px;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	-webkit-box-shadow: #B6B6B6 1px 1px 5px inset;
-	box-shadow: #B6B6B6 1px 1px 5px inset;
-	background-color: #FFF;
-}
 #purpose{
 	resize: none;
 	height: 56px;
@@ -457,12 +445,6 @@ label[for="service"]{
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 20px;
-}
-.required-text{
-	text-align: right;
-	height: 32px;
-	line-height: 30px;
-	margin-top: 5px;
 }
 .submit-wrap{
 	padding: 20px 0;
