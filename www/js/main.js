@@ -41,4 +41,8 @@ $(function(){
 			t.toggleClass('up');
 		});
 	});
+
+	$('.sub-menu li').each(function(){
+		$(this).css({'width': $(this).outerWidth(), 'padding': 0});
+	})
 });

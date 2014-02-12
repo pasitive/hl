@@ -8,70 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="/css/home.css"/>
 	<script type="text/javascript" src="/lib/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="/plugin/jquery.selectbox-0.2.min.js"></script>
+	<script type="text/javascript" src="/plugin/jquery.placeholder.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="/plugin/jquery.cs.js"></script>
 	<script type="text/javascript" src="/plugin/bubbles.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 	<script type="text/javascript" src="/js/home.js"></script>
-	<style type="text/css">
-
-		.mCSB_container {
-			width: auto;
-			margin-right: 30px;
-			overflow: hidden;
-		}
-		.mCSB_container.mCS_no_scrollbar {
-			margin-right: 0;
-		}
-		.mCustomScrollBox {
-			-ms-touch-action: none;
-			/*MSPointer events - direct all pointer events to js*/
-
-		}
-		.mCustomScrollBox > .mCSB_scrollTools {
-			width: 10px;
-			height: 100%;
-			top: 0;
-			right: 0;
-		}
-		.mCustomScrollBox > .mCSB_scrollTools .mCSB_draggerContainer {
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			height: auto;
-		}
-		.mCustomScrollBox > .mCSB_scrollTools .mCSB_draggerRail {
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-			-webkit-border-radius: 2px;
-			-moz-border-radius: 2px;
-			border-radius: 2px;
-			behavior: url(/css/css3pie/PIE.htc);
-			background: #7e1e1a;
-			/* rgba fallback */
-
-			background: rgba(126, 30, 26, 0.2);
-			filter: "alpha(opacity=20)";
-			-ms-filter: "alpha(opacity=20)";
-		}
-		.mCustomScrollBox > .mCSB_scrollTools .mCSB_dragger {
-			cursor: pointer;
-			width: 100%;
-		}
-		.mCustomScrollBox > .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-			-webkit-border-radius: 2px;
-			-moz-border-radius: 2px;
-			border-radius: 2px;
-			behavior: url(/css/css3pie/PIE.htc);
-			text-align: center;
-			background: rgba(255, 255, 255, 0.8);
-		}
-	</style>
 </head>
 <body>
 <div class="container">
@@ -117,7 +60,7 @@
 <!--main content-->
 
 <div class="content">
-	<div class="content-main-wrap full-height" data-view="true">
+	<div class="content-main-wrap scroll-section full-height" data-view="true">
 		<div class="content-main">
 			<div class="bubbles">
 
@@ -228,7 +171,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-web-wrap full-height" data-view="false">
+	<div class="content-web-wrap scroll-section full-height" data-view="false">
 		<div class="content-web">
 			<div class="content-box">
 				<div class="left-side">
@@ -259,7 +202,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-mobile-wrap full-height" data-view="false">
+	<div class="content-mobile-wrap scroll-section full-height" data-view="false">
 		<div class="content-mobile">
 			<div class="content-box">
 				<div class="left-side">
@@ -272,7 +215,14 @@
 							<li>— помогает выделиться среди конкурентов;</li>
 							<li>— упрощает оплату товаров и услуг;</li>
 							<li>— предоставляет клиентам актуальную информацию о продукте или услуге.</li>
-							<li>— мобильные приложения для различных целей</li>
+						</ul>
+						<p>мобильные приложения для различных целей</p>
+						<ul>
+							<li>— информационные;</li>
+							<li>— промо-приложения;</li>
+							<li>— бизнес-приложения;</li>
+							<li>— мобильные решения;</li>
+							<li>— в области электронной торговли;</li>
 						</ul>
 					</div>
 				</div>
@@ -284,7 +234,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-video-wrap full-height" data-view="false">
+	<div class="content-video-wrap scroll-section full-height" data-view="false">
 		<div class="content-video">
 			<div class="content-box">
 				<div class="left-side">
@@ -298,7 +248,10 @@
 							<li>— для корпоративных коммуникаций;</li>
 							<li>— в e-mail рассылках;</li>
 							<li>— для бизнес перезентаций;</li>
+							<li>— в личных целях.</li>
 						</ul>
+						<p>Мы делаем HappyVideo в профессиональной студии. Вы сами выбираете те опции, которые понадобятся для создании вашего уникального видеоролика: сценарий, актеры, музыка, плеер, 2D и 3D анимация, хостинг.</p>
+						<p>HappyVideo — это эффективный инструмент для взаимодействия с вашей целевой аудиторией.</p>
 					</div>
 				</div>
 				<div class="right-side"></div>
@@ -312,7 +265,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-seo-wrap full-height" data-view="false">
+	<div class="content-seo-wrap scroll-section full-height" data-view="false">
 		<div class="content-seo">
 			<div class="content-box">
 				<div class="left-side">
@@ -325,6 +278,7 @@
 							<li>— составление списка поисковых запросов для продвижения;</li>
 							<li>— размещение ссылок на сайт на различных площадках, регистрация сайта в каталогах и поисковых системах;</li>
 							<li>— оперативное реагирование на изменение в поведении поисковых систем;</li>
+							<li>— отчеты о результатах нашей работы, варианты дальнейших действий.</li>
 						</ul>
 					</div>
 				</div>
@@ -336,7 +290,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-smm-wrap full-height" data-view="false">
+	<div class="content-smm-wrap scroll-section full-height" data-view="false">
 		<div class="content-smm">
 			<div class="content-box">
 				<div class="left-side">
@@ -349,6 +303,11 @@
 							<li>— создание концепции, поиск каналов коммуникации, подбор контента;</li>
 							<li>— привлечение внимание пользователей, активное взаимодействие с аудиторией;</li>
 							<li>— обновление ленты, анализ статистики, работа с комментариями, отчеты о результатах</li>
+							<li>— внимание аудитории социальных сетей;</li>
+							<li>— увеличение эффективности маркетинговых акций и рекламных кампаний;</li>
+							<li>— рост продаж;</li>
+							<li>— привлечение новых клиентов и партнеров;</li>
+							<li>— повышение лояльности целевой аудитории.</li>
 						</ul>
 					</div>
 				</div>
@@ -360,13 +319,56 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-ask-form-wrap">
-		<div class="slogan-wrap">
-			<h1>Be happy!</h1>
-			<div class="slogan"></div>
-		</div>
-		<div class="content-web">
-
+	<div class="content-ask-form-wrap scroll-section" data-view="false">
+		<div class="content-ask-form">
+			<div class="slogan-wrap">
+				<h1>Be happy!</h1>
+				<div class="slogan">
+					Хорошие идеи изменяют этот мир к лучшему. Воплощение ваших идей —<br>
+					это наша работа. Создавайте новое, достигайте большего, удивляйте всех!
+				</div>
+			</div>
+			<div class="content-form">
+				<h2>Сделайте запрос на интересующую вас услугу</h2>
+				<form action="" method="post">
+					<div class="form-left-side">
+						<div class="form-row required">
+							<select class="required" name="service" id="service">
+								<option value="1">Сайт</option>
+								<option value="2">Мобильное приложение</option>
+								<option value="3">Видео</option>
+								<option value="4">Другое</option>
+							</select>
+							<label for="service">Сайт, мобильное приложение, видео, другое<br>(напишите название услуги)</label>
+						</div>
+						<div class="form-row">
+							<div class="textarea-wrap">
+								<textarea name="purpose" id="purpose" placeholder="Цель проекта"></textarea>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="dl-file">Загрузить файл</div>
+							<span class="dl-label">Прикрепите файл (текстовый документ, фото и т.д.)</span>
+						</div>
+					</div>
+					<div class="form-right-side">
+						<div class="required">
+							<input type="text" name="name" placeholder="Контактное лицо"/>
+						</div>
+						<div class="required">
+							<input type="text" name="mail" placeholder="Эл.почта"/>
+						</div>
+						<div class="required">
+							<input type="text" name="phone" placeholder="Телефон"/>
+						</div>
+						<div class="required-text"><span class="required">— поля обязательные для заполнения<span></div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="submit-wrap">
+						<input type="submit" value="Отправить"/>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

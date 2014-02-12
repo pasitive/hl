@@ -12,7 +12,8 @@
 .sub-menu-wrap li{
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 14px;
+	padding: 0 12px;
+	text-align: center;
 }
 .sub-menu-wrap li a{
 	line-height: 18px;

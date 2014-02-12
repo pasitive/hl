@@ -11,6 +11,10 @@
 .full-height p{
 	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
 	margin-bottom: 10px;
+	line-height: 20px;
+}
+.full-height li{
+	line-height: 20px;
 }
 .full-height h1{
 	margin: 0;
@@ -361,4 +365,123 @@
 	height: 446px;
 	margin: 20px 0 -70px -10px;
 	background: url(/img/happysmm.png) no-repeat center;
+}
+.content-ask-form-wrap{
+	width: 100%;
+	background: #ededed url(/img/background_contact.jpg) no-repeat center 135px;
+}
+.content-ask-form{
+	width: 900px;
+	margin: 0 auto;
+}
+.slogan-wrap h1{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 20px 25px 30px;
+	font-family: 'HelveticaNeueCyr-UltraLight', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 75px;
+	color: #34b4ac;
+}
+.slogan-wrap .slogan{
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 5px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+}
+.content-form{
+	color: #FFF;
+}
+.content-form h2{
+	font-size: 35px;
+	font-weight: normal;
+}
+.content-form input[type="text"]{
+	height: 30px;
+	width: 300px;
+	margin-bottom: 12px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+}
+label[for="service"]{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 13px;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+}
+.form-left-side{
+	float: left;
+}
+.form-right-side{
+	float: left;
+	margin-left: 60px;
+}
+.textarea-wrap{
+	width: 500px;
+	margin: 15px 0;
+	padding: 5px 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-box-shadow: #B6B6B6 1px 1px 5px inset;
+	box-shadow: #B6B6B6 1px 1px 5px inset;
+	background-color: #FFF;
+}
+#purpose{
+	resize: none;
+	height: 56px;
+	padding: 0;
+	overflow: hidden;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+}
+.dl-file{
+	display: inline-block;
+	vertical-align: middle;
+	width: 140px;
+	height: 32px;
+	line-height: 30px;
+	text-align: center;
+	color: #4d4d4f;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	background: url(/img/dl_btn.png) no-repeat 0 0;
+	cursor: pointer;
+}
+.dl-file:hover{
+	background: url(/img/dl_btn.png) no-repeat 0 -32px;
+}
+.dl-label{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+.required-text{
+	text-align: right;
+	height: 32px;
+	line-height: 30px;
+	margin-top: 5px;
+}
+.submit-wrap{
+	padding: 20px 0;
+}
+.submit-wrap input{
+	display: block;
+	width: 172px;
+	height: 43px;
+	margin: 0 auto;
+	line-height: 41px;
+	text-align: center;
+	color: #000;
+	font-size: 19px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	background: url(/img/send_btn.png) no-repeat 0 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.submit-wrap input:hover{
+	background: url(/img/send_btn.png) no-repeat 0 -43px;
 }
