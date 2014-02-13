@@ -29,3 +29,16 @@ JS:
 
 - Portfolio sliding solution
 - Portfolio items appearance solution
+
+13.02.2014
+
+
+HTML/CSS:
+
+home page
+- "our works" layouts
+- section height refactor
+
+JS:
+
+- Section sliding fix

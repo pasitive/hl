@@ -764,7 +764,18 @@ a.vk {
 	position: relative;
 	background: url(/img/sprites.png) no-repeat;
 	border-radius:80px;
+	-webkit-border-radius:80px;
+	-moz-border-radius:80px;
+	-ms-border-radius:80px;
+	-o-border-radius:80px;
 	overflow:hidden;
+}
+.portfolio-element img{
+	border-radius:80px;
+	-webkit-border-radius:80px;
+	-moz-border-radius:80px;
+	-ms-border-radius:80px;
+	-o-border-radius:80px;
 }
 .portfolio-element.web {
 	background-position: 0 -933px;

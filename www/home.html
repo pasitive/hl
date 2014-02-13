@@ -133,6 +133,13 @@
 					<span class="expand-toddler">Развернуть</span>
 				</div>
 				<hr>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="content-services-wrap scroll-section full-height" data-view="false">
+		<div class="content-services">
+			<div class="content-box inner-full-height">
 				<div class="services">
 					<ul class="our-services-list-index">
 						<li class="active"><span>Мобильный маркетинг</span></li>
@@ -175,12 +182,12 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
-	<div class="content-web-wrap scroll-section full-height" data-view="false">
+	<div id="happyweb" class="content-web-wrap scroll-section full-height" data-view="false">
 		<div class="content-web">
 			<div class="content-box inner-full-height">
 				<div class="left-side">
 					<h1>happyweb</h1>
-					<div>
+					<div class="custom-scrollbar">
 						<p>Интернет стал неотъемлемой частью нашей жизни. С каждым годом число пользователей интернета и количество времени, проведенного ими в сети, только растет.</p>
 						<p>HappyWeb — это современные и высокотехнологичные веб-сайты, которые привлекают посетителей как своим дизайном, так и функциональностью.</p>
 						<ol>
@@ -356,12 +363,12 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
-	<div class="content-mobile-wrap scroll-section full-height" data-view="false">
+	<div id="happymobile" class="content-mobile-wrap scroll-section full-height" data-view="false">
 		<div class="content-mobile">
 			<div class="content-box inner-full-height">
 				<div class="left-side">
 					<h1>happymobile</h1>
-					<div>
+					<div class="custom-scrollbar">
 						<p>это полезные и удобные сервисы для мобильных устройств, которые будут всегда под рукой пользователя. Наша команда разрабатывает самые разнообразные продукты: информационные и промо- приложения, спецпроекты для вашего бизнеса, мобильные решения в области электронной торговли.</p>
 						<ul>
 							<li>— увеличивает количество клиентов;</li>
@@ -383,18 +390,52 @@
 				<div class="right-side"></div>
 				<div class="clearfix"></div>
 				<div class="options-wrap">
-					<div class="portfolio-btn">Посмотреть наши работы</div>
+					<div class="portfolio-btn" data-target="#happymobile-portfolio" data-hide-text="Скрыть наши работы" data-show-text="Посмотреть наши работы" data-opened="false">Посмотреть наши работы</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="clearfix"></div>
-	<div class="content-video-wrap scroll-section full-height" data-view="false">
+	<div id="happymobile-portfolio" class="portfolio-container scroll-section full-height" data-view="false">
+		<div class="top-shadow"></div>
+		<div class="p-container">
+			<div class="content-box inner-full-height">
+				<div class="portfolio">
+				<div class="row-fluid">
+					<h2>Наши работы</h2>
+
+					<div class="slider">
+						<div class="slides">
+							<!-- Slide 0 -->
+							<div class="slide row-fluid">
+								<div class="row-fluid">
+									<a href="/projects/mobile/prilozhenie-evakuatsii-net/" class="element mobile">
+										<div class="span6">
+											<div class="portfolio-element mobile">
+												<div class="title-container">
+													<div class="title">Мобильное приложение «Эвакуации.нет»</div>
+												</div>
+												<img src="/img/Evaqua_anons.jpg" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- end .slider -->            </div>
+			</div><!-- end .portfolio -->
+			</div>
+		</div><!-- end .container -->
+	</div>
+	<div class="clearfix"></div>
+	<div id="happyvideo" class="content-video-wrap scroll-section full-height" data-view="false">
 		<div class="content-video">
 			<div class="content-box inner-full-height">
 				<div class="left-side">
 					<h1>happyvideo</h1>
-					<div>
+					<div class="custom-scrollbar">
 						<p>Happyweb — это яркие и запоминающиеся видео-ролики, которые расскажут о вас лучше, чем обычный текст. Готовое видео вы можете использовать как онлайн, так и оффлайн —на сайтах и в интернет- магазинах, в социальных сетяхи e-mail рассылках, для корпоративных коммуникаций, бизнес презентаций, да и просто в личных целях.</p>
 						<p>Вы можете разместить HappyVideo в интернете, или использовать оффлайн:</p>
 						<ul>
@@ -412,7 +453,7 @@
 				<div class="right-side"></div>
 				<div class="clearfix"></div>
 				<div class="options-wrap">
-					<div class="portfolio-btn">Посмотреть наши работы</div>
+					<div class="portfolio-btn" data-target="#happyvideo-portfolio" data-hide-text="Скрыть наши работы" data-show-text="Посмотреть наши работы" data-opened="false">Посмотреть наши работы</div>
 					<div class="actors-btn">Актеры</div>
 					<div class="demo-btn">Демо</div>
 					<div class="service-btn">Услуги</div>
@@ -421,12 +462,185 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
-	<div class="content-seo-wrap scroll-section full-height" data-view="false">
+	<!-- Happyvideo portfolio -->
+	<div id="happyvideo-portfolio" class="portfolio-container scroll-section full-height" data-view="false">
+		<div class="top-shadow"></div>
+		<div class="p-container">
+			<div class="content-box inner-full-height">
+			<div class="portfolio">
+				<div class="row-fluid">
+					<h2>Наши работы</h2>
+
+					<div class="slider">
+						<div class="slides">
+							<!-- Slide 0 -->
+							<div class="slide row-fluid">
+								<div class="row-fluid">
+									<a href="/projects/video/bezlimitno-ru/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title"></div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/mayskie-prazdniki/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Анимационный ролик &quot;МАЙСКИЕ ПРАЗДНИКИ&quot;</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/nastenka/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Видеоспикер для NASTENKA.su</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/animatsiya-k-8-marta-idealnoe-pozdravlenie/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Анимационный ролик к 8 марта</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<div class="clearfix"></div>
+								</div>
+								<div class="row-fluid">
+									<a href="/projects/video/23-fevralya/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Видеопоздравление с 23 февраля</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/spetspredlozhenie-k-8-marta-i-23-fevralya-ot-happylab/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Спецпредложение к 8 марта и 23 февраля</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/videopozdravlenie-happylab/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Новогоднее видеопоздравление Happylab </div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/novogodnee-spetspredlozhenie-ot-happyvideo/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Новогоднее спецпредложение HappyVideo</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- Slide 1 -->
+							<div class="slide row-fluid">
+								<div class="row-fluid">
+									<a href="/projects/video/elena-berkovoa/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Видеоспикер для сайта berkova.pro</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/krista-tur/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Видеоспикер для Krista-tur.ru</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/videospiker-tvkinoradio/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">Видеоспикер для TVKINORADIO.ru</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+									<a href="/projects/video/new_year/" class="element video">
+										<div class="span6">
+											<div class="portfolio-element video">
+												<div class="title-container">
+													<div class="title">видео для Берковой</div>
+												</div>
+												<img src="/img/007.png" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="row-fluid">
+								</div>
+							</div>
+						</div>
+
+						<div class="navigation">
+							<a class="prev" href="#"></a>
+							<a class="next" href="#"></a>
+						</div>
+
+						<div class="slider-pager"></div>
+					</div><!-- end .slider -->
+				</div>
+			</div><!-- end .portfolio -->
+			</div>
+		</div><!-- end .container -->
+	</div><!-- end #happyvideo-portfolio -->
+	<div class="clearfix"></div>
+	<div id="happyseo" class="content-seo-wrap scroll-section full-height" data-view="false">
 		<div class="content-seo">
 			<div class="content-box inner-full-height">
 				<div class="left-side">
 					<h1>happyseo</h1>
-					<div>
+					<div class="custom-scrollbar">
 						<p>это оперативная и эффективная оптимизация вашего сайта в поиске Яндекс и Google, которая позволяет улучшить ваши позициив результатах поиска и приводит к увеличению трафика с поисковых систем по профильным запросам. Кроме того, быстрому продвижению вашего сайта способствует контекстная реклама, которую мы разместим на страницах поисковых систем.</p>
 						<ul>
 							<li>— анализ предметной области сайта и его конкурентной среды;</li>
@@ -441,18 +655,54 @@
 				<div class="right-side"></div>
 				<div class="clearfix"></div>
 				<div class="options-wrap">
-					<div class="portfolio-btn">Посмотреть наши работы</div>
+					<div class="portfolio-btn" data-target="#happyseo-portfolio" data-hide-text="Скрыть наши работы" data-show-text="Посмотреть наши работы" data-opened="false">Посмотреть наши работы</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="clearfix"></div>
-	<div class="content-smm-wrap scroll-section full-height" data-view="false">
+	<!-- Happyseo portfolio -->
+	<div id="happyseo-portfolio" class="portfolio-container scroll-section full-height" data-view="false">
+		<div class="top-shadow"></div>
+
+		<div class="p-container">
+			<div class="content-box inner-full-height">
+			<div class="portfolio">
+				<div class="row-fluid">
+					<h2>Наши работы</h2>
+
+					<div class="slider">
+						<div class="slides">
+							<!-- Slide 0 -->
+							<div class="slide row-fluid">
+								<div class="row-fluid">
+									<a href="/projects/seo/prodvizhenie-v-top-20-proekta-tvkinoradio-ru/" class="element seo">
+										<div class="span6">
+											<div class="portfolio-element seo">
+												<div class="title-container">
+													<div class="title">продвижение tvkinoradio.ru</div>
+												</div>
+												<img src="" alt="" />
+												<div class="mask"></div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- end .slider -->	            </div>
+			</div><!-- end .portfolio -->
+			</div>
+		</div><!-- end .container -->
+	</div><!-- end #Happyseo-portfolio -->
+	<div class="clearfix"></div>
+	<div id="happysmm" class="content-smm-wrap scroll-section full-height" data-view="false">
 		<div class="content-smm">
 			<div class="content-box inner-full-height">
 				<div class="left-side">
 					<h1>happysmm</h1>
-					<div>
+					<div class="custom-scrollbar">
 						<p>это успешные и небанальные маркетинговые кампании в социальных сетях, которые обеспечат вам внимание пользователей соцсетей, приток новых клиентов и партнеров, рост продаж, повышение лояльности целевой аудитории. Мы используем все возможности социального общения в интернете, чтобы рассказать о вашем бизнесе.</p>
 						<ul>
 							<li>— определение цели;</li>
@@ -471,11 +721,31 @@
 				<div class="right-side"></div>
 				<div class="clearfix"></div>
 				<div class="options-wrap">
-					<div class="portfolio-btn">Посмотреть наши работы</div>
+					<div class="portfolio-btn" data-target="#happysmm-portfolio" data-hide-text="Скрыть наши работы" data-show-text="Посмотреть наши работы" data-opened="false">Посмотреть наши работы</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="clearfix"></div>
+	<!-- Happysmm portfolio -->
+	<div id="happysmm-portfolio" class="portfolio-container scroll-section full-height" data-view="false">
+		<div class="top-shadow"></div>
+
+		<div class="p-container">
+			<div class="content-box inner-full-height">
+			<div class="portfolio">
+				<div class="row-fluid">
+					<h2>Наши работы</h2>
+
+					<div class="slider">
+						<div class="slides">
+						</div>
+
+					</div><!-- end .slider -->	            </div>
+			</div><!-- end .portfolio -->
+			</div>
+		</div><!-- end .container -->
+	</div><!-- end #happysmm-portfolio -->
 	<div class="clearfix"></div>
 	<div class="content-ask-form-wrap scroll-section full-height" data-view="false">
 		<div class="content-ask-form">
@@ -529,6 +799,9 @@
 			</div>
 		</div>
 	</div>
+	<div class="clearfix"></div>
+	<div style="height: 1px; margin-top: -1px;"></div>
+	<div class="clearfix"></div>
 </div>
 
 <!--footer-->

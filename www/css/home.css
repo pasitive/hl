@@ -30,13 +30,14 @@
 	vertical-align: middle;
 }
 .inner-full-height{
-	min-height: 650px !important;
+	min-height: 600px !important;
 }
 
 .content-main .bubbles {
 	position: relative;
 	float: left;
 	height: 510px;
+	width: 462px;
 	margin-bottom: 50px;
 }
 .content-main .bubbles .bubble-bounce {
@@ -220,8 +221,16 @@
 	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
 	cursor: pointer;
 }
-.services{
+.content-services-wrap{
 	display: none;
+}
+.content-services-wrap .content-box li{
+	color: #656565;
+}
+.content-services-wrap .our-services-list-index li{
+	line-height: 42px;
+}
+.services{
 	padding: 30px 0;
 }
 .our-services-list-index {
@@ -280,6 +289,11 @@
 	float: left;
 	margin: 0 0 0 25px;
 	width: 450px;
+}
+.custom-scrollbar{
+	height: 300px;
+	margin-right: 20px;
+	overflow: hidden;
 }
 .options-wrap{
 	margin: 50px 0 0 0;
@@ -375,7 +389,6 @@
 }
 .content-ask-form-wrap{
 	width: 100%;
-	margin-bottom: -130px;
 	background: #ededed url(/img/background_contact.jpg) no-repeat center 135px;
 }
 .content-ask-form{

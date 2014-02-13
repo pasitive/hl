@@ -5,22 +5,14 @@ var countAvailHeight = function(){
 document.write('<style type="text/css">.full-height{min-height: ' + countAvailHeight() + 'px;}.inner-full-height{height: ' + countAvailHeight() + 'px;}</style>');
 
 $(function(){
-	var findSibling = function(oppositeDirection){
+	var sectionSlide = function(direction){
+			if(!isScroll){
+				isScroll = true;
+				var currentBox = $('[data-view="true"]'),
+					newBox;
 
-	};
+				newBox = currentBox.findSiblingByClass('scroll-section', direction);
 
-	$('html, body').animate({scrollTop: 0});
-
-	/*Section sliding*/
-	$(document).bind('mousewheel', function(e, delta){
-		e.preventDefault();
-		if(!isScroll){
-			isScroll = true;
-			var currentBox = $('[data-view="true"]'),
-				newBox;
-
-			if(delta < 0){
-				newBox = currentBox.next().next('.scroll-section');
 				if(newBox.length){
 					currentBox.attr('data-view', 'false');
 					newBox.attr('data-view', 'true').scrollTo(function(){
@@ -29,27 +21,42 @@ $(function(){
 				} else {
 					isScroll = false;
 				}
-			} else {
-				newBox = currentBox.prev().prev('.scroll-section');
-				if(newBox.length){
-					currentBox.attr('data-view', 'false');
-					newBox.attr('data-view', 'true').scrollTo(function(){
-						isScroll = false;
-					});
-				} else {
-					currentBox.scrollTo(function(){
-						isScroll = false;
-					});
-				}
-
 			}
-		}
+		},
+
+		defineFooterPos = function(){
+			var footer = $('.footer'),
+				lastSection = $('.content-ask-form-wrap'),
+				lastSectionContent = lastSection.find('.content-ask-form'),
+				marginBottom = lastSection.height() - lastSectionContent.height();
+
+			lastSection.css({
+				'height': lastSectionContent.height(),
+				'min-height': lastSectionContent.height(),
+				'margin-bottom': marginBottom
+			});
+
+			footer.css('margin-top', (-1)*marginBottom);
+		};
+
+	$('html, body').scrollTo();
+
+	defineFooterPos();
+
+	$('.custom-scrollbar').mCustomScrollbar();
+
+	/*Section sliding*/
+	$(document).bind('mousewheel', function(e, delta){
+		e.preventDefault();
+		var direction = delta > 0;
+		sectionSlide(direction);
 	});
 
 	/*Height by window resize*/
 	$(window).bind('resize', function(){
 		$('.full-height').css('min-height', countAvailHeight());
 		$('.inner-full-height').css('height', countAvailHeight());
+		defineFooterPos();
 	});
 
 	/*Bubbles*/
@@ -59,23 +66,21 @@ $(function(){
 	}, 500);
 
 	$('.bubble-bounce .circle').bubbleBalance();
+	$('.bubble-bounce .circle').animatеScroll();
 
 	/*Service list*/
 	$('.expand-toddler').click(function(){
 
 		if (!$(this).hasClass('opened'))
 		{
-			$('.services').slideDown(function(){
-				$(this).scrollTo(function(){}, true);
-			});
+			$('.content-services-wrap').slideDown('slow');
+			sectionSlide(false);
 			$(this).addClass('opened');
 			$(this).text('Свернуть');
 		}
 		else
 		{
-			$('.services').slideUp(function(){
-				$('[data-view="true"]').scrollTo();
-			});
+			$('.content-services-wrap').slideUp('fast');
 			$(this).removeClass('opened');
 			$(this).text('Развернуть');
 		}
@@ -117,10 +122,9 @@ $(function(){
 			textElement.text($(this).data('hideText'));
 
 			// Show portfolio
-			target.slideDown('slow', function(){
-				// Scroll to portfolio
-				target.scrollTo(function(){}, true);
-			});
+			target.slideDown('slow');
+
+			sectionSlide(false);
 
 			// Define slider
 			var slides = target.find('.slides');
@@ -150,9 +154,7 @@ $(function(){
 			// Hide portfolio
 			$(this).data('opened', false);
 			textElement.text($(this).data('showText'));
-			target.slideUp('slow', function(){
-				$('[data-view="true"]').scrollTo();
-			});
+			target.slideUp('fast');
 		}
 	});
 
