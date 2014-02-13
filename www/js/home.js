@@ -2,9 +2,13 @@ var countAvailHeight = function(){
 	return window.innerHeight - 117;
 };
 
-document.write('<style type="text/css">.full-height{min-height: ' + countAvailHeight() + 'px;}</style>');
+document.write('<style type="text/css">.full-height{min-height: ' + countAvailHeight() + 'px;}.inner-full-height{height: ' + countAvailHeight() + 'px;}</style>');
 
 $(function(){
+	var findSibling = function(oppositeDirection){
+
+	};
+
 	$('html, body').animate({scrollTop: 0});
 
 	/*Section sliding*/
@@ -45,6 +49,7 @@ $(function(){
 	/*Height by window resize*/
 	$(window).bind('resize', function(){
 		$('.full-height').css('min-height', countAvailHeight());
+		$('.inner-full-height').css('height', countAvailHeight());
 	});
 
 	/*Bubbles*/

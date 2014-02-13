@@ -25,6 +25,13 @@
 .full-height hr{
 	margin: 0;
 }
+.content-box.inner-full-height{
+	display: table-cell;
+	vertical-align: middle;
+}
+.inner-full-height{
+	min-height: 650px !important;
+}
 
 .content-main .bubbles {
 	position: relative;
@@ -262,8 +269,8 @@
 	background: url(/img/happyweb.png) no-repeat 0 0;
 }
 .content-box{
-	padding: 50px 0;
 	font-size: 15px;
+	width: 900px;
 }
 .content-box h1{
 	color: #FFF;
@@ -275,7 +282,7 @@
 	width: 450px;
 }
 .options-wrap{
-	margin: 90px 0 0 0;
+	margin: 50px 0 0 0;
 }
 .portfolio-btn, .actors-btn, .demo-btn, .service-btn{
 	position: relative;
@@ -368,6 +375,7 @@
 }
 .content-ask-form-wrap{
 	width: 100%;
+	margin-bottom: -130px;
 	background: #ededed url(/img/background_contact.jpg) no-repeat center 135px;
 }
 .content-ask-form{
