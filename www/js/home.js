@@ -1,6 +1,11 @@
 var countAvailHeight = function(){
-	return window.innerHeight - 117;
-};
+		return window.innerHeight - 117;
+	},
+	calculateRel = function(){
+		$('[data-view]:visible').each(function(){
+			$(this).attr('data-offset', $(this).offset().top);
+		});
+	};
 
 document.write('<style type="text/css">.full-height{min-height: ' + countAvailHeight() + 'px;}.inner-full-height{height: ' + countAvailHeight() + 'px;}</style>');
 
@@ -44,6 +49,22 @@ $(function(){
 	defineFooterPos();
 
 	$('.custom-scrollbar').mCustomScrollbar();
+
+	$(window).bind('scroll', function(){
+		if(!isAnimate){
+			var hHeight = $('.header').height(),
+				hOffset = $('.header').offset().top,
+				sectionInView = $('[data-offset="' + (hOffset + hHeight) + '"]');
+
+			console.log(hHeight);
+			console.log(hOffset);
+			if(sectionInView.length){
+				console.log(sectionInView);
+				$('[data-view="true"]').attr('data-view', 'false');
+				sectionInView.attr('data-view', 'true');
+			}
+		}
+	});
 
 	/*Section sliding*/
 	$(document).bind('mousewheel', function(e, delta){
@@ -168,4 +189,6 @@ $(function(){
 	}).mouseleave(function(){
 		$(this).find('img').fadeIn(100);
 	});
+
+	calculateRel();
 });

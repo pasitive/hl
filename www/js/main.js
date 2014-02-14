@@ -14,6 +14,7 @@ $.fn.scrollTo = function(callback, opposite) {
 		}, function(){
 			isAnimate = false;
 			callback && callback();
+			calculateRel();
 		});
 	}
 };
@@ -75,7 +76,6 @@ $(function(){
 	$('.t-pointer').click(function(){
 		var t = $(this);
 		$('.sub-footer-wrap').slideToggle('fast', function(){
-			if(!t.hasClass('up'))$(this).scrollTo();
 			t.toggleClass('up');
 		});
 	});
