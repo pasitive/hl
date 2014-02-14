@@ -265,6 +265,7 @@
 	background: url(/img/background_web.jpg) no-repeat center;
 }
 .content-box li, .content-box p{
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
 	line-height: 20px;
 	color: #FFF;
 }

@@ -172,6 +172,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	line-height: 22px;
 	text-align: center;
 	font-size: 11px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
 	text-shadow: 0 0 3px #329996;
 	color: #FFF;
 	background: url(/img/btn-new.png) no-repeat 0 0;
@@ -604,6 +605,7 @@ a.vk {
 
 .required{
 	position: relative;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
 }
 .required:before{
 	content: '';
@@ -877,6 +879,7 @@ a.vk {
 	background: -moz-linear-gradient(top, #EDEDED 0%,#D7D7D7 50%);
 	background: -ms-linear-gradient(top, #EDEDED 0%,#D7D7D7 50%);
 	background: -o-linear-gradient(top, #EDEDED 0%,#D7D7D7 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EDEDED', endColorstr='#D7D7D7');
 	-webkit-box-shadow: 0px 0px 30px 0px #000;
 	-moz-box-shadow: 0px 0px 30px 0px #000;
 	-ms-box-shadow: 0px 0px 30px 0px #000;
@@ -900,7 +903,6 @@ a.vk {
 	height: 30px;
 	padding: 0 15px;
 	margin-bottom: 20px;
-	line-height: 30px;
 	font-size: 15px;
 	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
 	color: #4C4C4E;
@@ -919,7 +921,7 @@ a.vk {
 }
 .popup .required-text{
 	font-size: 15px;
-	font-family: 'HelveticaNeueCyr-ThinItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
 }
 .popup .submit-btn-wrap{
 	text-align: center;
