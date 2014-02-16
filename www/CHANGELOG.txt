@@ -56,5 +56,5 @@ HTML/CSS/JS:
 - Projects page layout
 - Our clients page layout
 - Vacancies page layout
-- Vacancies page layout
+- Feedbacks page layout
 
