@@ -1,0 +1,103 @@
+/**
+ *
+ *	Responses page styles
+ *
+ */
+
+.sub-menu-wrap{
+	width: 100%;
+	margin: 50px 0 30px;
+	text-align: center;
+}
+.sub-menu-wrap li{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 12px;
+	text-align: center;
+}
+.sub-menu-wrap li a{
+	line-height: 18px;
+	font-size: 18px;
+	color: #393838;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.sub-menu-wrap li.selected a{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.sub-menu-wrap li a:hover{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+
+.about-block{
+	margin-bottom: 60px;
+}
+.about-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	margin: 30px 0 20px;
+}
+.about-block p{
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.hovered-box {
+	padding: 20px 0 30px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	width: 897.0015999999999px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+	overflow: hidden;
+}
+.hovered-box:hover {
+	background: #b7d7d5;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	-webkit-box-shadow: 3px 3px 3px #d7d7d7;
+	-moz-box-shadow: 3px 3px 3px #d7d7d7;
+	-ms-box-shadow: 3px 3px 3px #d7d7d7;
+	-o-box-shadow: 3px 3px 3px #d7d7d7;
+	box-shadow: 3px 3px 3px #d7d7d7;
+}
+.pers-info-wrap{
+	float: left;
+	margin-left: 20px;
+}
+.pers-info{
+	height: 142px;
+}
+.photo{
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+.data{
+	display: inline-block;
+	vertical-align: bottom;
+}
+.client-name{
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+}
+.client-position, .client-company{
+	font-size: 13px;
+	font-family: 'HelveticaNeueCyr-ThinItalic', Helvetica, Arial, sans-serif;
+}
+.description{
+	margin: 0 10px 20px 340px;
+}

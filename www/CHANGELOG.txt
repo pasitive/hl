@@ -42,3 +42,19 @@ home page
 JS:
 
 - Section sliding fix
+
+14.02.2014
+
+JS:
+
+- Home page refactor
+
+15.02.2014
+
+HTML/CSS/JS:
+
+- Projects page layout
+- Our clients page layout
+- Vacancies page layout
+- Vacancies page layout
+

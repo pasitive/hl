@@ -56,10 +56,7 @@ $(function(){
 				hOffset = $('.header').offset().top,
 				sectionInView = $('[data-offset="' + (hOffset + hHeight) + '"]');
 
-			console.log(hHeight);
-			console.log(hOffset);
 			if(sectionInView.length){
-				console.log(sectionInView);
 				$('[data-view="true"]').attr('data-view', 'false');
 				sectionInView.attr('data-view', 'true');
 			}
