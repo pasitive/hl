@@ -56,6 +56,19 @@ $.fn.findSiblingByClass = function(className, oppositeDirection){
 	return [];
 };
 
+$.fn.staffElement = function(){
+	var foundedElements = 'img.colored, .text';
+	var methods = navigator.userAgent.indexOf('MSIE 8.0') == -1 ? ['fadeIn', 'fadeOut'] : ['show', 'hide'];
+
+	return this.each(function(){
+		$(this).mouseenter(function(){
+			$(this).find(foundedElements)[methods[0]]();
+		}).mouseleave(function(){
+				$(this).find(foundedElements)[methods[1]]();
+			});
+	});
+};
+
 $(function(){
 	/*Custom placeholder*/
 	$('input[type="text"], textarea').placeholder();
@@ -95,4 +108,6 @@ $(function(){
 	$('.overlay, .popup-wrap').click(function(){
 		$('.overlay, .popup-wrap').fadeOut('slow');
 	});
+
+	$('.about-block .staff-element').staffElement();
 });

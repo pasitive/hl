@@ -1,0 +1,116 @@
+/**
+ *
+ *	Staff page styles
+ *
+ */
+
+.sub-menu-wrap{
+	width: 100%;
+	margin: 50px 0 30px;
+	text-align: center;
+}
+.sub-menu-wrap li{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 12px;
+	text-align: center;
+}
+.sub-menu-wrap li a{
+	line-height: 18px;
+	font-size: 18px;
+	color: #393838;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.sub-menu-wrap li.selected a{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.sub-menu-wrap li a:hover{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+
+.about-block{
+	margin-bottom: 30px;
+}
+.about-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	margin: 30px 0 20px;
+}
+.about-block p{
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.about-block .staff-element {
+	margin-bottom: 25px;
+	width: 186px;
+	margin-left: 52.000533333333316px;
+	position: relative;
+}
+.about-block .staff-element:first-child {
+	margin-left: 0;
+}
+.about-block .staff-element img.colored {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.about-block .staff-element .meta {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+.about-block .staff-element .meta span {
+	background: #2db9b4;
+	color: white;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	font-size: 14px;
+	line-height: 14px;
+}
+.about-block .staff-element .meta.name {
+	margin-top: -18px;
+	font-family: 'HelveticaNeueCyr-Medium', Arial, sans-serif;
+}
+.about-block .staff-element .meta.post {
+	margin-top: 5px;
+	font-family: 'HelveticaNeueCyr-Light', Arial, sans-serif;
+}
+.about-block .staff-element .meta.name span {
+	padding: 1px 8px 1px;
+}
+.about-block .staff-element .meta.post span {
+	padding: 1px 8px 1px;
+}
+.about-block .staff-element .text {
+	position: absolute;
+	width: 230px;
+	height: 118px;
+	top: -10px;
+	left: -160px;
+	color: #393838;
+	font-size: 13px;
+	line-height: 1.4em;
+	padding: 10px 9px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	display: none;
+	background: url(/img/sprites.png) 0 -2136px no-repeat;
+	z-index: 1;
+}
+.about-block .staff-element .text.right {
+	left: 95px;
+	background: url(/img/sprites.png) 0 -2013px no-repeat;
+	z-index: 1;
+}

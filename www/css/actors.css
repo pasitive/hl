@@ -1,0 +1,103 @@
+/**
+ *
+ *	Actors page styles
+ *
+ */
+
+.content-wrap{
+	position: relative;
+}
+.close_but_anchor {
+	position: absolute;
+	top: -3px;
+	right: 0;
+}
+.close_but {
+	background: url(/img/sprites.png) no-repeat scroll -149px -569px rgba(0, 0, 0, 0);
+	border: medium none;
+	cursor: pointer;
+	height: 40px;
+	margin: 0 0 0 auto;
+	width: 40px;
+	opacity: 0.6;
+}
+.sub-menu-wrap{
+	width: 100%;
+	padding: 50px 0 30px;
+	text-align: center;
+}
+.sub-menu-wrap li{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 18px;
+	text-align: center;
+}
+.sub-menu-wrap li a{
+	line-height: 24px;
+	font-size: 24px;
+	color: #393838;
+	font-weight: normal;
+}
+.sub-menu-wrap li.active a{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.sub-menu-wrap li a:hover{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.actors-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	margin: 30px 0 20px;
+}
+.actors-block p{
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.actors .element {
+	float: left;
+	margin: 15px;
+	position: relative;
+	z-index: 2;
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property: -moz-transform, opacity;
+	-ms-transition-property: -ms-transform, opacity;
+	-o-transition-property: -o-transform, opacity;
+	transition-property: transform, opacity;
+}
+.element .img{
+	width: 270px;
+	height: 270px;
+	border-bottom: 1px solid #656565;
+	overflow: hidden;
+}
+.element:hover .actor-name{
+	opacity: 1;
+}
+.element .actor-name{
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	-ms-opacity: 0;
+	-o-opacity: 0;
+	opacity: 0;
+	padding: 5px 0;
+	text-align: center;
+	background-color: #34b4ac;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.element .actor-name span{
+	font-size: 15px;
+	line-height: 20px;
+	color: #FFF;
+}

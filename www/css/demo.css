@@ -1,0 +1,79 @@
+/**
+ *
+ *	Demo page styles
+ *
+ */
+
+.content-wrap{
+	position: relative;
+}
+.close_but_anchor {
+	position: absolute;
+	top: -3px;
+	right: 0;
+}
+.close_but {
+	background: url(/img/sprites.png) no-repeat scroll -149px -569px rgba(0, 0, 0, 0);
+	border: medium none;
+	cursor: pointer;
+	height: 40px;
+	margin: 0 0 0 auto;
+	width: 40px;
+	opacity: 0.6;
+}
+.demo-block{
+	min-height: 550px;
+	padding-right: 350px;
+	background: url(/img/demo.png) no-repeat 700px 60px;
+}
+.demo-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	padding: 30px 0 20px;
+	margin: 0;
+	color: #000;
+}
+.demo-block p{
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	color: #000;
+}
+.demo-block .medium{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+}
+.demo-block form{
+	margin: 0 0 30px;
+}
+.demo-block form input[type="text"]{
+	display: inline-block;
+	vertical-align: top;
+	width: 380px;
+	min-height: 41px;
+	margin-right: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	font-size: 15px;
+	color: #000;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+}
+.demo-block form input[type="submit"]{
+	display: inline-block;
+	vertical-align: top;
+	width: 127px;
+	height: 43px;
+	text-align: center;
+	color: #FFF;
+	font-size: 19px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	background: url(/img/demo_btn.png) no-repeat 0 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.demo-block form input[type="submit"]:hover{
+	background-position: 0 -43px;
+}

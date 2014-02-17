@@ -531,7 +531,6 @@ a.vk {
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
-	behavior: url(/css/css3pie/PIE.htc);
 	-webkit-box-shadow: inset 1px 1px 5px #b6b6b6;
 	-moz-box-shadow: inset 1px 1px 5px #b6b6b6;
 	box-shadow: inset 1px 1px 5px #b6b6b6;
@@ -847,6 +846,10 @@ a.vk {
 	height: 32px;
 	line-height: 30px;
 	margin-top: 5px;
+}
+
+#order{
+	overflow: hidden;
 }
 
 

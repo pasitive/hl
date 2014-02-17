@@ -1,0 +1,118 @@
+/**
+ *
+ *	Contacts page styles
+ *
+ */
+
+.content{
+	background: url(/img/background_contact.jpg) no-repeat center;
+}
+.content-wrap{
+	padding: 0 0 40px 0;
+}
+.contacts-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	margin: 30px 0 20px;
+	color: #FFF;
+}
+.contacts-block p{
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+.form-left-side{
+	float: left;
+	width: 265px;
+	margin-right: 50px;
+}
+.form-left-side input{
+	min-height: 30px;
+	color: #000000;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+}
+.form-right-side{
+	float: left;
+	width: 350px;
+	margin-right: 50px;
+}
+.textarea-wrap{
+	margin: 0;
+	width: 320px;
+}
+.contacts-block textarea{
+	resize: none;
+	height: 74px;
+	width: 320px;
+	color: #000000;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+}
+#message{
+	overflow: hidden;
+}
+.contacts-block .required-text{
+	text-align: left;
+	height: 20px;
+	margin-left: 7px;
+	line-height: 20px;
+	color: #FFF;
+}
+.contact-info{
+	color: #FFF;
+	font-size: 15px;
+	line-height: 20px;
+}
+.contact-info{
+	float: left;
+	color: #FFF;
+	font-size: 15px;
+	line-height: 22px;
+}
+.contact-info .mail a{
+	color: #FFF;
+	font-size: 15px;
+	line-height: 22px;
+}
+.contact-info .mail a:hover{
+	text-decoration: underline;
+}
+.contact-info .phone{
+	margin-bottom: 2px;
+}
+.contact-info .phone a{
+	font-size: 19px;
+	line-height: 23px;
+	font-weight: normal;
+	color: #FFF;
+	font-family: 'HelveticaNeueCyr-Bold', Helvetica, Arial, sans-serif;
+}
+.contact-info .phone a:hover{
+	text-decoration: underline;
+}
+.submit-wrap {
+	padding: 20px 0;
+}
+.submit-wrap input {
+	display: block;
+	width: 172px;
+	height: 43px;
+	margin: 0 auto;
+	line-height: 41px;
+	text-align: center;
+	color: #000;
+	font-size: 19px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	background: url(/img/send_btn.png) no-repeat 0 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.submit-wrap input:hover {
+	background: url(/img/send_btn.png) no-repeat 0 -43px;
+}
+#map_canvas {
+	width: 900px;
+	height: 300px;
+	background-color: #CCC;
+}

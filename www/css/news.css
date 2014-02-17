@@ -1,0 +1,72 @@
+/**
+ *
+ *	News page styles
+ *
+ */
+
+.sub-menu-wrap{
+	width: 100%;
+	margin: 50px 0 30px;
+	text-align: center;
+}
+.sub-menu-wrap li{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 12px;
+	text-align: center;
+}
+.sub-menu-wrap li a{
+	line-height: 18px;
+	font-size: 18px;
+	color: #393838;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.sub-menu-wrap li.selected a{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.sub-menu-wrap li a:hover{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+
+.about-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	margin: 30px 0 20px;
+}
+
+.news-item{
+	float: left;
+	width: 270px;
+	margin: 0 0 50px 30px;
+}
+.news-item.first{
+	margin-left: 0;
+}
+.news-img{
+	margin-bottom: 15px;
+}
+.n-date{
+	margin-bottom: 5px;
+}
+.n-date span{
+	font-size: 13px;
+	line-height: 13px;
+}
+.n-title h4{
+	margin: 0 0 5px 0;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 20px;
+	text-decoration: underline;
+	color: #34b4ac;
+}
+.n-text p{
+	margin: 0;
+	font-size: 15px;
+	line-height: 15px;
+	color: #393838;
+}
+

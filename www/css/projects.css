@@ -21,7 +21,7 @@
 	color: #393838;
 	font-weight: normal;
 }
-.sub-menu-wrap li.ac a{
+.sub-menu-wrap li.active a{
 	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
 	color: #34B4AC;
 }
@@ -34,10 +34,11 @@
 	font-weight: normal;
 	margin: 30px 0 20px;
 }
-.proj-block p{
+.proj-block .projects-text{
 	font-size: 15px;
 	line-height: 20px;
 	margin-bottom: 10px;
+	width: 550px;
 }
 .hide-btn{
 	font-size: 17px;

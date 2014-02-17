@@ -58,3 +58,12 @@ HTML/CSS/JS:
 - Vacancies page layout
 - Feedbacks page layout
 
+16.02.214
+
+HTML/CSS/JS:
+
+- Our stuff page layout
+- News page layout
+- Actors page layout
+- Demo page layout
+- Contacts page layout
