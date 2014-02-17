@@ -1,9 +1,13 @@
-var countAvailHeight = function(){
-		return window.innerHeight - 117;
+var availHeight,
+	countAvailHeight = function(){
+		availHeight = window.innerHeight - 117
+		return availHeight;
 	},
+	position = {},
 	calculateRel = function(){
+		position = {};
 		$('[data-view]:visible').each(function(){
-			$(this).attr('data-offset', $(this).offset().top);
+			position[$(this).data('section')] = $(this).offset().top;
 		});
 	};
 
@@ -50,15 +54,23 @@ $(function(){
 
 	$('.custom-scrollbar').mCustomScrollbar();
 
+	/*Handle scrolling by toddler*/
 	$(window).bind('scroll', function(){
 		if(!isAnimate){
 			var hHeight = $('.header').height(),
 				hOffset = $('.header').offset().top,
-				sectionInView = $('[data-offset="' + (hOffset + hHeight) + '"]');
+				shift = hOffset + hHeight,
+				sectionInView;
 
-			if(sectionInView.length){
-				$('[data-view="true"]').attr('data-view', 'false');
-				sectionInView.attr('data-view', 'true');
+			for(var p in position){
+				if(shift > position[p] && shift < position[p] + availHeight){
+					sectionInView = $('[data-section="' + p + '"]');
+					if(sectionInView.length){
+						$('[data-view="true"]').attr('data-view', 'false');
+						sectionInView.attr('data-view', 'true');
+						return;
+					}
+				}
 			}
 		}
 	});
@@ -123,9 +135,8 @@ $(function(){
 
 	});
 
-	/**
-	 * Portfolio button
-	 */
+
+	/*Portfolio button*/
 	$('.portfolio-btn').click(function(){
 
 		// Replace text
@@ -178,9 +189,7 @@ $(function(){
 
 
 
-	/**
-	 * Portfolio elements
-	 */
+	/*Portfolio elements*/
 	$('.portfolio-element').mouseenter(function(){
 		$(this).find('img').fadeOut(100);
 	}).mouseleave(function(){
