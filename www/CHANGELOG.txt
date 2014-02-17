@@ -58,7 +58,7 @@ HTML/CSS/JS:
 - Vacancies page layout
 - Feedbacks page layout
 
-16.02.214
+16.02.2014
 
 HTML/CSS/JS:
 
@@ -67,3 +67,20 @@ HTML/CSS/JS:
 - Actors page layout
 - Demo page layout
 - Contacts page layout
+
+17.02.2014
+
+HTML/CSS/JS:
+
+- Contacts page layout
+- Project page layout
+
+18.02.2014
+
+HTML/CSS:
+
+- Services page layout
+
+JS:
+
+- Home page section scroll fix

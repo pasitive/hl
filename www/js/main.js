@@ -110,4 +110,6 @@ $(function(){
 	});
 
 	$('.about-block .staff-element').staffElement();
+
+	$('.prev-p, .next-p').css('top', (window.innerHeight - $('.header').height())/2 - 20);
 });
