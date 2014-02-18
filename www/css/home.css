@@ -399,7 +399,8 @@
 .slogan-wrap h1{
 	display: inline-block;
 	vertical-align: middle;
-	margin: 20px 25px 30px;
+	padding: 20px 50px 30px 0;
+	margin: 0;
 	font-family: 'HelveticaNeueCyrUltraLight', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 75px;
@@ -416,6 +417,8 @@
 	color: #FFF;
 }
 .content-form h2{
+	margin: 0;
+	padding: 30px 0;
 	font-size: 35px;
 	font-weight: normal;
 }

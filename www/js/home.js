@@ -1,6 +1,9 @@
 var availHeight,
 	countAvailHeight = function(){
-		availHeight = window.innerHeight - 117
+		var avail = window.innerHeight - 118;
+
+		availHeight = avail <= 640 ? 640 : avail;
+
 		return availHeight;
 	},
 	position = {},
@@ -50,15 +53,14 @@ $(function(){
 
 	$('html, body').scrollTo();
 
-	defineFooterPos();
-
 	$('.custom-scrollbar').mCustomScrollbar();
 
 	/*Handle scrolling by toddler*/
 	$(window).bind('scroll', function(){
 		if(!isAnimate){
-			var hHeight = $('.header').height(),
-				hOffset = $('.header').offset().top,
+			var header = $('.header'),
+				hHeight = header.height(),
+				hOffset = header.offset().top,
 				shift = hOffset + hHeight,
 				sectionInView;
 
@@ -197,4 +199,9 @@ $(function(){
 	});
 
 	calculateRel();
+
+	/*Define footer shift fix*/
+	setTimeout(function(){
+		$(window).trigger('resize');
+	}, 500);
 });
