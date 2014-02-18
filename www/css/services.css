@@ -1,0 +1,113 @@
+/**
+ *
+ *	Services page styles
+ *
+ */
+
+.sub-menu-wrap{
+	width: 100%;
+	margin: 50px 0 30px;
+	text-align: center;
+}
+.sub-menu-wrap li{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 20px;
+	text-align: center;
+}
+.sub-menu-wrap li a{
+	line-height: 26px;
+	font-size: 24px;
+	color: #393838;
+	font-weight: normal;
+}
+.sub-menu-wrap li.selected a{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.sub-menu-wrap li a:hover{
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+
+.services-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	margin: 30px 0 20px;
+}
+.services-block > p{
+	width: 550px;
+	font-size: 22px;
+	line-height: 26px;
+	margin-bottom: 10px;
+}
+.service-list{
+	padding: 20px 0 0;
+}
+.s-item{
+	float: left;
+	width: 270px;
+	margin: 0 0 30px 30px;
+}
+.s-item.first{
+	margin-left: 0;
+}
+.s-text{
+	font-size: 13px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+}
+.s-pic{
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+	width: 70px;
+	height: 70px;
+	margin: 10px auto;
+	line-height: 70px;
+	font-size: 16px;
+	text-align: center;
+	color: #FFF;
+}
+.web .s-pic{
+	background: url(/img/web_small_bg_100_per.jpg) no-repeat 0 0;
+}
+.mobile .s-pic{
+	background: url(/img/mobile_small_bg_100_per.jpg) no-repeat 0 0;
+}
+.video .s-pic{
+	background: url(/img/video_small_bg_100_per.jpg) no-repeat 0 0;
+}
+.design .s-pic{
+	background: url(/img/design_small_bg_100_per.jpg) no-repeat 0 0;
+}
+.seo .s-pic{
+	background: url(/img/seo_small_bg_100_per.jpg) no-repeat 0 0;
+}
+.smm .s-pic{
+	background: url(/img/smm_small_bg_100_per.jpg) no-repeat 0 0;
+}
+.order-btn-wrap{
+	padding: 10px 0 30px;
+	text-align: center;
+}
+.order-btn{
+	display: inline-block;
+	background: url(/img/sprites.png) no-repeat 0 -31px;
+	margin-top: 10px;
+	background-position: 0 -3465px;
+	height: 48px;
+	width: 141px;
+	line-height: 48px;
+	font-size: 17px;
+	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	color: #FFF;
+	border: none;
+	outline: none;
+	text-align: center;
+	cursor: pointer;
+}
+.order-btn:hover{
+	background-position: 0 -3515px
+}
