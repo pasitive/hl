@@ -40,7 +40,7 @@
 	color: #000;
 }
 .demo-block .medium{
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 }
 .demo-block form{
 	margin: 0 0 30px;
@@ -58,7 +58,7 @@
 	border-radius: 20px;
 	font-size: 15px;
 	color: #000;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
 .demo-block form input[type="submit"]{
 	display: inline-block;
@@ -68,7 +68,7 @@
 	text-align: center;
 	color: #FFF;
 	font-size: 19px;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	background: url(/img/demo_btn.png) no-repeat 0 0;
 	border: none;
 	outline: none;

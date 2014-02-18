@@ -29,7 +29,7 @@
 .form-left-side input{
 	min-height: 30px;
 	color: #000000;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
 .form-right-side{
 	float: left;
@@ -46,7 +46,7 @@
 	width: 320px;
 	color: #000000;
 	font-size: 15px;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
 #message{
 	overflow: hidden;
@@ -85,7 +85,7 @@
 	line-height: 23px;
 	font-weight: normal;
 	color: #FFF;
-	font-family: 'HelveticaNeueCyr-Bold', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrBold', Helvetica, Arial, sans-serif;
 }
 .contact-info .phone a:hover{
 	text-decoration: underline;
@@ -102,7 +102,7 @@
 	text-align: center;
 	color: #000;
 	font-size: 19px;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	background: url(/img/send_btn.png) no-repeat 0 0;
 	border: none;
 	outline: none;

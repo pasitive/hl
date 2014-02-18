@@ -22,11 +22,11 @@
 	font-weight: normal;
 }
 .sub-menu-wrap li.active a{
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 	color: #34B4AC;
 }
 .sub-menu-wrap li a:hover{
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 	color: #34B4AC;
 }
 .proj-block h1{
@@ -126,5 +126,5 @@
 	text-align: center;
 	color: white;
 	font-size: 17px;
-	font-family: 'helveticaneuecyrultralight', Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrUltraLight', Helvetica, Arial, sans-serif;
 }

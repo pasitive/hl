@@ -41,14 +41,14 @@
 	font-weight: normal;
 	line-height: 20px;
 	margin-bottom: 10px;
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 	color: #FFF;
 }
 .project-block p{
 	font-size: 15px;
 	line-height: 20px;
 	margin-bottom: 10px;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	color: #FFF;
 }
 .p-slide-item img{
@@ -65,7 +65,7 @@
 	width: 435px;
 }
 .p-right p span{
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 }
 .p-right .fb{
 	background-position: 0 -1953px;

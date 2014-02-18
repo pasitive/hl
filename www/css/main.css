@@ -7,7 +7,7 @@
 html, body{
 	margin: 0;
 	color: #656565;
-	font-family: 'HelveticaNeueCyr-Thin', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrThin', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	background: url(/img/body_bg.png) repeat 0 0;
 }
@@ -159,7 +159,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	margin: 25px 0 0 415px;
 }
 .phone-wrap a{
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	font-size: 22px;
 }
 .callback-wrap{
@@ -172,7 +172,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	line-height: 22px;
 	text-align: center;
 	font-size: 11px;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	text-shadow: 0 0 3px #329996;
 	color: #FFF;
 	background: url(/img/btn-new.png) no-repeat 0 0;
@@ -210,7 +210,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	height: 36px;
 	padding: 0 30px;
 	line-height: 36px;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #FFF;
 }
@@ -255,7 +255,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	float: left;
 }
 .login-wrap p{
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	margin-bottom: 5px;
 }
@@ -265,7 +265,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	width: 134px;
 	margin-right: 5px;
 	font-size: 13px;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 	color: #4d4d4f;
 }
 .login-wrap input.login-btn{
@@ -278,7 +278,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	font-style: normal;
 	text-shadow: inset 1px 1px 2px #ccc;
 	background: url(/img/btn-new.png) 0 -24px no-repeat;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	border: none;
 	cursor: pointer;
 }
@@ -293,10 +293,10 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 }
 .contacts-wrap .phone{
 	margin-bottom: 10px;
-	font-family: 'HelveticaNeueCyr-Roman', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrRoman', Helvetica, Arial, sans-serif;
 }
 .contacts-wrap .mail{
-	font-family: 'HelveticaNeueCyr-Roman', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrRoman', Helvetica, Arial, sans-serif;
 	text-decoration: underline;
 }
 .follow-us-wrap{
@@ -356,7 +356,7 @@ a.vk {
 	font-style: normal;
 	text-shadow: inset 1px 1px 2px #ccc;
 	background: url(/img/btn-new.png) 0 -24px no-repeat;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	border: none;
 	cursor: pointer;
 }
@@ -364,7 +364,7 @@ a.vk {
 	background: url(/img/btn-new.png) -62px -24px no-repeat;
 }
 .copyright{
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	font-size: 11px;
 }
 .sub-footer-toddler{
@@ -567,7 +567,7 @@ a.vk {
 	line-height: 30px;
 	color: #4d4d4f;
 	font-size: 15px;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 }
 .sbHolder.opened{
 	border-color: rgba(82, 168, 236, 0.8);
@@ -606,7 +606,7 @@ a.vk {
 
 .required{
 	position: relative;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
 .required:before{
 	content: '';
@@ -712,7 +712,7 @@ a.vk {
 .container .portfolio-container .portfolio h2 {
 	font-size: 62px;
 	font-weight: normal;
-	font-family: 'HelveticaNeueCyr-UltraLight', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrUltraLight', Helvetica, Arial, sans-serif;
 	color: #D94037;
 	margin-bottom: 25px;
 }
@@ -909,7 +909,7 @@ a.vk {
 	padding: 0 15px;
 	margin-bottom: 20px;
 	font-size: 15px;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 	color: #4C4C4E;
 }
 .popup textarea{
@@ -917,7 +917,7 @@ a.vk {
 	padding: 0;
 	resize: none;
 	font-size: 15px;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 	color: #4C4C4E;
 }
 .popup .textarea-wrap{
@@ -926,7 +926,7 @@ a.vk {
 }
 .popup .required-text{
 	font-size: 15px;
-	font-family: 'HelveticaNeueCyr-LightItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
 .popup .submit-btn-wrap{
 	text-align: center;
@@ -939,7 +939,7 @@ a.vk {
 	width: 171px;
 	line-height: 41px;
 	font-size: 17px;
-	font-family: 'HelveticaNeueCyr-Light', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	color: #FFF;
 	border: none;
 	outline: none;

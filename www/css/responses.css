@@ -23,11 +23,11 @@
 	text-transform: uppercase;
 }
 .sub-menu-wrap li.selected a{
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 	color: #34B4AC;
 }
 .sub-menu-wrap li a:hover{
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 	color: #34B4AC;
 }
 
@@ -92,11 +92,11 @@
 }
 .client-name{
 	font-size: 15px;
-	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 }
 .client-position, .client-company{
 	font-size: 13px;
-	font-family: 'HelveticaNeueCyr-ThinItalic', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeueCyrThinItalic', Helvetica, Arial, sans-serif;
 }
 .description{
 	margin: 0 10px 20px 340px;
