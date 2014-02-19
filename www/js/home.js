@@ -2,7 +2,7 @@ var availHeight,
 	countAvailHeight = function(){
 		var avail = window.innerHeight - 118;
 
-		availHeight = avail <= 640 ? 640 : avail;
+		availHeight = avail <= 620 ? 620 : avail;
 
 		return availHeight;
 	},

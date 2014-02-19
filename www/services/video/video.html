@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Contacts</title>
+	<title>Services</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="/css/fonts.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/main.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/contacts.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/services.css"/>
 	<script type="text/javascript" src="/lib/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.selectbox-0.2.min.js"></script>
@@ -45,10 +45,10 @@
 				<li>
 					<a href="/about/">О НАС</a>
 				</li>
-				<li>
+				<li class="selected">
 					<a href="/services/">УСЛУГИ</a>
 				</li>
-				<li class="selected">
+				<li>
 					<a href="/contacts/">КОНТАКТЫ</a>
 				</li>
 			</ul>
@@ -60,95 +60,75 @@
 
 <div class="content">
 	<div class="content-wrap">
-		<div class="contacts-block">
-			<h1>Контактная информация</h1>
-			<form action="" method="post">
-				<div class="form-left-side">
-					<div class="required">
-						<input type="text" name="name" placeholder="Имя">
-					</div>
-					<div class="required">
-						<input type="text" name="phone" placeholder="Телефон">
-					</div>
-					<div class="required">
-						<input type="text" name="mail" placeholder="Эл.почта">
-					</div>
+		<div class="sub-menu-wrap">
+			<ul class="sub-menu">
+				<li>
+					<a href="/services/web/">web</a>
+				</li>
+				<li>
+					<a href="/services/mobile/">mobile</a>
+				</li>
+				<li class="selected">
+					<a href="/services/video/">video</a>
+				</li>
+				<li>
+					<a href="/services/design/">graphic design</a>
+				</li>
+				<li>
+					<a href="/services/seo/">seo</a>
+				</li>
+				<li>
+					<a href="/services/smm/">smm</a>
+				</li>
+			</ul>
+		</div>
+		<hr>
+		<div class="services-block">
+			<h1>Наши услуги</h1>
+			<p>Ощущение мономерности ритмического движения возникает, как правило, в условиях темповой стабильности, тем не менее попса заканчивает пласт,о чем подробно говорится в книге М. Друскина «Ганс Эйслер и рабочее музыкальное движение в Германии».</p>
+		</div>
+		<div class="video-list">
+			<h4>Типы видеороликов:</h4>
+			<hr>
+			<div class="video-item">
+				<div class="left-side">
+					<h4>Видеозаставка</h4>
+					<p>Яркий короткий (до 20 сек.) ролик, способный привлечь внимание к указанным товарам, услугам. Материалы  (фотографии, изображения и т.д.) для создания такого ролика предоставляет, как правило, сам Заказчик, поэтому бюджет может быть достаточно небольшим. Мы делаем несложный монтаж, добавляем простую анимацию, титры, инфографику и присоединяем музыкальное сопровождение.</p>
 				</div>
-				<div class="form-right-side">
-					<div class="textarea-wrap">
-						<textarea name="message" id="message" placeholder="Оставьте ваше сообщение и нашменеджер свяжется с вами"></textarea>
-					</div>
-					<div class="required-text"><span class="required">— поля обязательные для заполнения<span></span></span></div>
-				</div>
-				<div class="contact-info">
-					<div class="phone">
-						<a href="tel:+74999513032">+7 499 951-30-32</a>
-					</div>
-					<div class="address">
-						127427, Москва,<br>
-						ул. Академика Королева,<br>
-						дом 23, стр. 3<br>
-					</div>
-					<div class="mail">
-						<a href="mailto:info@happylab.ru">info@happylab.ru</a>
-					</div>
+				<div class="right-side">
+					<img src="/img/sv1.png" alt=""/>
+					<div class="sub-text">Посмотреть все работы</div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="submit-wrap">
-					<input type="submit" value="Отправить">
-				</div>
-			</form>
-			<div class="row-fluid maps-container">
-				<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-				<script>
-					function initialize() {
-						var myLatLng = new google.maps.LatLng(55.8217, 37.6002);
-
-						var map = new google.maps.Map(
-							document.getElementById('map_canvas'),
-							{
-								center: myLatLng,
-								zoom: 16,
-								mapTypeId: google.maps.MapTypeId.ROADMAP,
-								disableDefaultUI: true
-							}
-						);
-
-						var marker = new google.maps.Marker({
-							position: myLatLng,
-							map: map,
-							icon: '/img/map_marker.png'
-						});
-
-						map.set('styles', [
-							{
-								stylers: [
-									{ hue: "#00ffe6" },
-									{ saturation: -20 }
-								]
-							},
-							{
-								featureType: "road",
-								elementType: "geometry",
-								stylers: [
-									{ lightness: 100 },
-									{ visibility: "simplified" }
-								]
-							},
-							{
-								featureType: "road",
-								elementType: "labels",
-								stylers: [
-									{ visibility: "off" }
-								]
-							}
-						]);
-					}
-					google.maps.event.addDomListener(window, "load", initialize);
-				</script>
-				<div id="map_canvas"></div>
 			</div>
-			<div class="clearfix"></div>
+			<hr>
+			<div class="video-item">
+				<div class="left-side">
+					<h4>Видеоспикер (видеогид)</h4>
+					<p>Эффективный маркетинговый инструмент для улучшения юзабилити и повышения конверсии на сайте. Заказчик выбирает персонажа (профессиональный актер, представитель компании Заказчика или анимационный персонаж), предлагает идею для текста или готовый текст. Преимущества данного видео: в удобной форме донести посетителям самую важную информацию, задержать их на сайте, а также привлечь дополнительное внимание к своей компании и выделиться среди конкурентов.</p>
+				</div>
+				<div class="right-side">
+					<img src="/img/sv2.png" alt=""/>
+					<div class="sub-text">Посмотреть все работы</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<hr>
+			<div class="video-item">
+				<div class="left-side">
+					<h4>Видеооткрытка (поздравление, приглашение)</h4>
+					<p>Оригинальное видеосообщение, в котором Заказчик может обратиться к своим клиентам своей компании в честь какого-либо праздника/события или пригласить на мероприятие. Кроме этого такое видео создают в личных целях, адресуя его родственникам, друзьям, знакомым (приглашение на свадьбу, юбилей и т.д.). Заказчик может поучаствовать лично в съемке видеоматериала, может пригласить профессионального актера или предложить анимационного персонажа.</p>
+				</div>
+				<div class="right-side">
+					<img src="/img/sv1.png" alt=""/>
+					<div class="sub-text">Посмотреть все работы</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<hr>
+		<div class="order-btn-wrap">
+			<div class="order-btn">Заказать</div>
 		</div>
 	</div>
 </div>

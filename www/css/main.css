@@ -122,7 +122,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 	box-shadow: inset 1px 1px 5px #B6B6B6;
 	background: #FFF;
 	width: 100%;
-	padding: 0 10px;
+	padding: 0 15px;
 	min-height: 20px;
 }
 input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
@@ -209,6 +209,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 }
 .main-menu{
 	float: right;
+	background: url(/img/header_menu_limiter.png) no-repeat right center;
 }
 .main-menu li{
 	float: left;
@@ -248,22 +249,17 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	z-index: 2;
 	width: 100%;
 	min-width: 900px;
-	padding-top: 25px;
-	height: 101px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
-	background: url(/img/sprites.png) 0 -2476px repeat-x;
-	-webkit-box-shadow: 0 1px 10px 2px #808080 inset;
-	-moz-box-shadow: 0 1px 10px 2px #808080 inset;
-	-ms-box-shadow: 0 1px 10px 2px #808080 inset;
-	-o-box-shadow: 0 1px 10px 2px #808080 inset;
-	box-shadow: 0 1px 10px 2px #808080 inset;
+	background: url(/img/footer_bg.png) 0 0 repeat-x;
 }
 .f-top{
 	width: 900px;
+	height: 54px;
+	padding: 40px 0;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -390,7 +386,6 @@ a.vk {
 	text-align: center;
 	padding: 11px 0;
 	height: 12px;
-	margin-top: 16px;
 }
 .t-pointer{
 	display: block;
@@ -1609,4 +1604,10 @@ a.vk {
 	opacity: .2;
 	filter: Alpha(Opacity=20);
 	border-radius: 5px;
+}
+.sub-title{
+	margin-bottom: 10px;
+}
+.f-col a{
+	color: #283617;
 }

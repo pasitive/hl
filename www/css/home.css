@@ -227,7 +227,7 @@
 }
 .expand-toddler{
 	float: right;
-	margin: 30px 25px 0 0;
+	margin: 40px 25px 0 0;
 	text-decoration: underline;
 	font-size: 16px;
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
@@ -309,7 +309,7 @@
 	overflow: hidden;
 }
 .options-wrap{
-	margin: 50px 0 0 0;
+	margin: 100px 0 0 0;
 }
 .portfolio-btn, .actors-btn, .demo-btn, .service-btn{
 	position: relative;
@@ -379,7 +379,7 @@
 .content-video .right-side{
 	width: 403px;
 	height: 538px;
-	margin: 0 0 -100px 15px;
+	margin: 0 -60px -100px 60px;
 	background: url(/img/happyvideo.png) no-repeat center;
 }
 .content-seo-wrap{
@@ -444,6 +444,7 @@
 label[for="service"]{
 	display: inline-block;
 	vertical-align: middle;
+	margin-left: 10px;
 	font-size: 13px;
 	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
