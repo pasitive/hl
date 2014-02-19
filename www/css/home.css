@@ -4,6 +4,14 @@
  *
  */
 
+.logo-wrap{
+	float: left;
+	margin: 10px 0 0 30px;
+}
+.phone-wrap{
+	float: left;
+	margin: 25px 0 0 385px;
+}
 .full-height > div{
 	width: 900px;
 	margin: 0 auto;
@@ -38,7 +46,7 @@
 	float: left;
 	height: 510px;
 	width: 462px;
-	margin-bottom: 50px;
+	margin: -30px 26px 50px -30px;
 }
 .content-main .bubbles .bubble-bounce {
 	float: left;
@@ -180,8 +188,8 @@
 }
 .main-info{
 	float: left;
-	width: 410px;
-	margin: 80px 0 0 20px;
+	width: 400px;
+	margin: 80px 0 0 40px;
 	font-size: 16px;
 }
 .main-info h1{
@@ -196,8 +204,12 @@
 }
 .dl-present{
 	margin-top: 60px;
-	padding-left: 90px;
+	padding-left: 100px;
 	background: url(/img/sprites.png) -91px -842px no-repeat;
+}
+.dl-present a{
+	border-bottom: 1px solid;
+	font-size: 21px;
 }
 .dl-present p{
 	margin: 0;
@@ -399,7 +411,7 @@
 .slogan-wrap h1{
 	display: inline-block;
 	vertical-align: middle;
-	padding: 20px 50px 30px 0;
+	padding: 20px 20px 30px 0;
 	margin: 0;
 	font-family: 'HelveticaNeueCyrUltraLight', Helvetica, Arial, sans-serif;
 	font-weight: normal;
@@ -472,7 +484,7 @@ label[for="service"]{
 	margin-left: 20px;
 }
 .submit-wrap{
-	padding: 20px 0;
+	padding: 40px 0 30px;
 }
 .submit-wrap input{
 	display: block;

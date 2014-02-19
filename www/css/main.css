@@ -28,6 +28,21 @@ input:focus, input:hover{
 	outline: none;
 	border: none;
 }
+[placeholder]{
+	color: #4d4d4f;
+}
+::-webkit-input-placeholder {
+	color: #4d4d4f;
+}
+:-moz-placeholder {
+	color: #4d4d4f;
+}
+::-moz-placeholder {
+	color: #4d4d4f;
+}
+:-ms-placeholder {
+	color: #4d4d4f;
+}
 ol, ul, li{
 	padding: 0;
 	margin: 0;
@@ -152,7 +167,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 }
 .logo-wrap{
 	float: left;
-	margin-top: 10px;
+	margin: 10px 0 0;
 }
 .phone-wrap{
 	float: left;
@@ -163,7 +178,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	font-size: 22px;
 }
 .callback-wrap{
-	float: left;
+	float: right;
 	margin: 26px 0 0 30px;
 }
 .callback-btn{
@@ -207,11 +222,12 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 }
 .main-menu li a{
 	display: block;
+	width: 110px;
 	height: 36px;
-	padding: 0 30px;
 	line-height: 36px;
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	text-align: center;
 	color: #FFF;
 }
 .main-menu li a:hover{
@@ -586,6 +602,7 @@ a.vk {
 }
 .sbSelector{
 	display: block;
+	color: #4D4D4F;
 }
 .sbOptions{
 	position: absolute;
