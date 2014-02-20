@@ -12,6 +12,9 @@
 	float: left;
 	margin: 25px 0 0 385px;
 }
+.full-height{
+	overflow: hidden;
+}
 .full-height > div{
 	width: 900px;
 	margin: 0 auto;
@@ -427,10 +430,11 @@
 }
 .content-form{
 	color: #FFF;
+	height: 380px;
 }
 .content-form h2{
 	margin: 0;
-	padding: 30px 0;
+	padding: 40px 0 30px;
 	font-size: 35px;
 	font-weight: normal;
 }
@@ -483,6 +487,7 @@ label[for="service"]{
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 20px;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
 .submit-wrap{
 	padding: 40px 0 30px;
