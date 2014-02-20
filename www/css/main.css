@@ -16,6 +16,7 @@ a{
 	color: #656565;
 	text-decoration: none;
 	border: none;
+	-webkit-font-smoothing: antialiased;
 }
 img{
 	border: none;
@@ -44,10 +45,14 @@ input:focus, input:hover{
 :-ms-placeholder {
 	color: #4d4d4f;
 }
+h1, h2, h3, h4{
+	-webkit-font-smoothing: antialiased;
+}
 ol, ul, li{
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
 }
 ol li{
 	list-style-position: inside;
@@ -55,6 +60,7 @@ ol li{
 }
 p{
 	margin: 0;
+	-webkit-font-smoothing: antialiased;
 }
 hr{
 	margin: 10px 0;
