@@ -91,3 +91,9 @@ HTML/CSS:
 
 - Services_2 page layout
 - Services_3 page layout
+
+21.02.2014
+
+JS:
+
+- view module logic
