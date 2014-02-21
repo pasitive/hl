@@ -1,8 +1,10 @@
 var availHeight,
+	headerHeight = 118,
 	countAvailHeight = function(){
-		var avail = window.innerHeight - 118;
+		var maxHeight = 620,
+			avail = window.innerHeight - headerHeight;
 
-		availHeight = avail <= 620 ? 620 : avail;
+		availHeight = avail <= maxHeight ? maxHeight : avail;
 
 		return availHeight;
 	},
@@ -12,84 +14,150 @@ var availHeight,
 		$('[data-view]:visible').each(function(){
 			position[$(this).data('section')] = $(this).offset().top;
 		});
+	},
+	sectionSlide = function(direction){
+		if(!isScroll){
+			isScroll = true;
+			var currentBox = $('[data-view="true"]'),
+				newBox;
+
+			newBox = currentBox.findSiblingByClass('scroll-section', direction);
+
+			if(newBox.length){
+				currentBox.attr('data-view', 'false');
+				newBox.attr('data-view', 'true').scrollTo(function(){
+					isScroll = false;
+				});
+			} else {
+				isScroll = false;
+			}
+		}
+	},
+	defineFooterPos = function(){
+		var footer = $('.footer'),
+			lastSection = $('.content-ask-form-wrap'),
+			lastSectionContent = lastSection.find('.content-ask-form'),
+			marginBottom = lastSection.height() - lastSectionContent.height();
+
+		lastSection.css({
+			'height': lastSectionContent.height(),
+			'min-height': lastSectionContent.height(),
+			'margin-bottom': marginBottom
+		});
+
+		footer.css('margin-top', (-1)*marginBottom);
+	},
+	attachHomeHandlers = function(){
+		/*Handle scrolling by toddler*/
+		$(window).bind('scroll', function(){
+			if(!isAnimate){
+				var header = $('.header'),
+					hHeight = header.height(),
+					hOffset = header.offset().top,
+					shift = hOffset + hHeight,
+					sectionInView;
+
+				for(var p in position){
+					if(shift > position[p] && shift < position[p] + availHeight){
+						sectionInView = $('[data-section="' + p + '"]');
+						if(sectionInView.length){
+							$('[data-view="true"]').attr('data-view', 'false');
+							sectionInView.attr('data-view', 'true');
+							return;
+						}
+					}
+				}
+			}
+		});
+
+		/*Height by window resize*/
+		$(window).bind('resize', function(){
+			$('.full-height').css('min-height', countAvailHeight());
+			$('.inner-full-height').css('height', countAvailHeight());
+			defineFooterPos();
+		});
+
+		/*Section sliding*/
+		$(document).bind('mousewheel', function(e, delta){
+			e.preventDefault();
+			var direction = delta > 0;
+			sectionSlide(direction);
+		});
+	},
+	detachHomeHandlers = function(){
+		$(window).unbind('scroll resize');
+		$(document).unbind('mousewheel');
+	},
+	viewModule = {
+		'state': '',
+		'defineState': function(){
+			viewModule['state'] = location.hash ? location.hash.replace(/#/, '') : 'main';
+		},
+		'setState': function(state){
+			location.hash = state;
+			viewModule['state'] = state;
+		},
+		'stateHandler': {
+			'main': function(section){
+				var toHide = viewModule['state'].split('/');
+				for(var i = 0; i < toHide.length; i++){
+				 	$('#' + toHide[i]).hide();
+				}
+				$('#main').fadeIn('slow', function(){
+					attachHomeHandlers();
+				});
+				if(section){
+					console.log(1);
+					$('body, html').scrollTop( $('#' + section).offset().top - headerHeight );
+				}
+				viewModule['setState']('main');
+			},
+			'projects': function(project, section){
+				var toHide = viewModule['state'].split('/');
+				for(var i = 0; i < toHide.length; i++){
+					$('#' + toHide[i]).hide();
+				}
+				detachHomeHandlers();
+				$('#' + project + ', #' + section).fadeIn('slow');
+				viewModule['setState'](project + '/' + section);
+			}
+		},
+		'changeState': function(value){
+			var arr = value.split('/');
+			console.log(arr);
+			if(arr.length == 2){
+				viewModule['stateHandler'][arr[0]](arr[1]);
+			}
+			else if(arr.length == 3){
+				viewModule['stateHandler'][arr[0]](arr[1], arr[2]);
+			}
+			else {
+				viewModule['stateHandler'][value]();
+			}
+		}
 	};
 
 document.write('<style type="text/css">.full-height{min-height: ' + countAvailHeight() + 'px;}.inner-full-height{height: ' + countAvailHeight() + 'px;}</style>');
 
 $(function(){
-	var sectionSlide = function(direction){
-			if(!isScroll){
-				isScroll = true;
-				var currentBox = $('[data-view="true"]'),
-					newBox;
+	viewModule['defineState']();
 
-				newBox = currentBox.findSiblingByClass('scroll-section', direction);
+	console.log(viewModule['state']);
 
-				if(newBox.length){
-					currentBox.attr('data-view', 'false');
-					newBox.attr('data-view', 'true').scrollTo(function(){
-						isScroll = false;
-					});
-				} else {
-					isScroll = false;
-				}
-			}
-		},
+	viewModule['changeState'](viewModule['state']);
 
-		defineFooterPos = function(){
-			var footer = $('.footer'),
-				lastSection = $('.content-ask-form-wrap'),
-				lastSectionContent = lastSection.find('.content-ask-form'),
-				marginBottom = lastSection.height() - lastSectionContent.height();
-
-			lastSection.css({
-				'height': lastSectionContent.height(),
-				'min-height': lastSectionContent.height(),
-				'margin-bottom': marginBottom
-			});
-
-			footer.css('margin-top', (-1)*marginBottom);
-		};
+	if(viewModule['state'] != 'main'){
+		detachHomeHandlers();
+	} else {
+		attachHomeHandlers();
+		setTimeout(function(){
+			calculateRel();
+		}, 500);
+	}
 
 	$('html, body').scrollTo();
 
 	$('.custom-scrollbar').mCustomScrollbar();
-
-	/*Handle scrolling by toddler*/
-	$(window).bind('scroll', function(){
-		if(!isAnimate){
-			var header = $('.header'),
-				hHeight = header.height(),
-				hOffset = header.offset().top,
-				shift = hOffset + hHeight,
-				sectionInView;
-
-			for(var p in position){
-				if(shift > position[p] && shift < position[p] + availHeight){
-					sectionInView = $('[data-section="' + p + '"]');
-					if(sectionInView.length){
-						$('[data-view="true"]').attr('data-view', 'false');
-						sectionInView.attr('data-view', 'true');
-						return;
-					}
-				}
-			}
-		}
-	});
-
-	/*Section sliding*/
-	$(document).bind('mousewheel', function(e, delta){
-		e.preventDefault();
-		var direction = delta > 0;
-		sectionSlide(direction);
-	});
-
-	/*Height by window resize*/
-	$(window).bind('resize', function(){
-		$('.full-height').css('min-height', countAvailHeight());
-		$('.inner-full-height').css('height', countAvailHeight());
-		defineFooterPos();
-	});
 
 	/*Bubbles*/
 	setTimeout(function() {
@@ -189,8 +257,6 @@ $(function(){
 		}
 	});
 
-
-
 	/*Portfolio elements*/
 	$('.portfolio-element').mouseenter(function(){
 		$(this).find('img').fadeOut(100);
@@ -198,10 +264,8 @@ $(function(){
 		$(this).find('img').fadeIn(100);
 	});
 
-	calculateRel();
-
 	/*Define footer shift fix*/
-	setTimeout(function(){
+	/*setTimeout(function(){
 		$(window).trigger('resize');
-	}, 500);
+	}, 500);*/
 });
