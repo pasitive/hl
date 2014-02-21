@@ -1,32 +1,33 @@
-var availHeight,
+var position = {},
+	availHeight,
 	headerHeight = 118,
 	countAvailHeight = function(){
 		var maxHeight = 620,
 			avail = window.innerHeight - headerHeight;
-
-		availHeight = avail <= maxHeight ? maxHeight : avail;
-
+			availHeight = avail <= maxHeight ? maxHeight : avail;
 		return availHeight;
 	},
-	position = {},
 	calculateRel = function(){
 		position = {};
 		$('[data-view]:visible').each(function(){
 			position[$(this).data('section')] = $(this).offset().top;
 		});
 	},
-	sectionSlide = function(direction){
+	sectionSlide = function(data){
 		if(!isScroll){
 			isScroll = true;
 			var currentBox = $('[data-view="true"]'),
 				newBox;
 
-			newBox = currentBox.findSiblingByClass('scroll-section', direction);
+			newBox = data.node && data.node.length ? data.node : currentBox.findSiblingByClass('scroll-section', data.direction);
 
 			if(newBox.length){
 				currentBox.attr('data-view', 'false');
-				newBox.attr('data-view', 'true').scrollTo(function(){
-					isScroll = false;
+				newBox.attr('data-view', 'true').scrollTo({
+					speed: data.speed,
+					callback: function(){
+						isScroll = false;
+					}
 				});
 			} else {
 				isScroll = false;
@@ -81,7 +82,7 @@ var availHeight,
 		$(document).bind('mousewheel', function(e, delta){
 			e.preventDefault();
 			var direction = delta > 0;
-			sectionSlide(direction);
+			sectionSlide({direction: direction});
 		});
 	},
 	detachHomeHandlers = function(){
@@ -89,50 +90,66 @@ var availHeight,
 		$(document).unbind('mousewheel');
 	},
 	viewModule = {
-		'state': '',
+		'state': 'main',
 		'defineState': function(){
-			viewModule['state'] = location.hash ? location.hash.replace(/#/, '') : 'main';
+			viewModule['state'] = location.hash && location.hash.replace(/#/, '');
+		},
+		'checkData': function(array){
+			var arr = [];
+			for(var i = 0; i < array.length; i++){
+				arr.push('#' + array[i]);
+			}
+			return arr.join(',');
 		},
 		'setState': function(state){
 			location.hash = state;
 			viewModule['state'] = state;
 		},
 		'stateHandler': {
-			'main': function(section){
-				var toHide = viewModule['state'].split('/');
+			'main': function(data){
+				var section = data[0] || '',
+					toHide = viewModule['state'].split('/');
+
 				for(var i = 0; i < toHide.length; i++){
 				 	$('#' + toHide[i]).hide();
 				}
-				$('#main').fadeIn('slow', function(){
+				$('#main').fadeIn(1000, function(){
 					attachHomeHandlers();
 				});
 				if(section){
-					console.log(1);
-					$('body, html').scrollTop( $('#' + section).offset().top - headerHeight );
+					sectionSlide({speed: 100, node: $('#' + section)});
+					//document.body.scrollTop = 0;
 				}
 				viewModule['setState']('main');
 			},
-			'projects': function(project, section){
-				var toHide = viewModule['state'].split('/');
-				for(var i = 0; i < toHide.length; i++){
-					$('#' + toHide[i]).hide();
+			'projects': function(data){
+				var project = data[0],
+					section = data[1],
+					toHide = viewModule['state'].split('/');
+
+				if(project && section){
+					for(var i = 0; i < toHide.length; i++){
+						$('#' + toHide[i]).hide();
+					}
+					detachHomeHandlers();
+					$('#' + project + ', #' + section).show();
+					document.body.scrollTop = 0;
+					$('#projects').fadeIn(1000);
+					//$('html, body').scrollTo({speed:100});
+					viewModule['setState']('projects/' + project + '/' + section);
+				} else {
+					viewModule['changeState']('main');
 				}
-				detachHomeHandlers();
-				$('#' + project + ', #' + section).fadeIn('slow');
-				viewModule['setState'](project + '/' + section);
 			}
 		},
 		'changeState': function(value){
-			var arr = value.split('/');
-			console.log(arr);
-			if(arr.length == 2){
-				viewModule['stateHandler'][arr[0]](arr[1]);
-			}
-			else if(arr.length == 3){
-				viewModule['stateHandler'][arr[0]](arr[1], arr[2]);
-			}
-			else {
-				viewModule['stateHandler'][value]();
+			var arr = value.split('/'),
+				arrLenght = arr.length;
+
+			if(arrLenght && arrLenght == $(viewModule['checkData'](arr)).length){
+				viewModule['stateHandler'][arr[0]](arr.slice(1));
+			} else {
+				viewModule['changeState']('main');
 			}
 		}
 	};
@@ -140,11 +157,14 @@ var availHeight,
 document.write('<style type="text/css">.full-height{min-height: ' + countAvailHeight() + 'px;}.inner-full-height{height: ' + countAvailHeight() + 'px;}</style>');
 
 $(function(){
-	viewModule['defineState']();
-
-	console.log(viewModule['state']);
-
-	viewModule['changeState'](viewModule['state']);
+	var hash = location.hash && location.hash.replace(/#/, '');
+	if(hash && hash != 'main'){
+		viewModule['changeState'](hash);
+	} else {
+		document.body.scrollTop = 0;
+		$('html, body').scrollTo({speed:100});
+		$('#main').fadeIn('slow');
+	}
 
 	if(viewModule['state'] != 'main'){
 		detachHomeHandlers();
@@ -155,7 +175,11 @@ $(function(){
 		}, 500);
 	}
 
-	$('html, body').scrollTo();
+	$('.portfolio .element, .close_but_anchor').click(function(e){
+		e.preventDefault();
+		var href = $(this).attr('href').replace(/#/, '');
+		viewModule['changeState'](href);
+	});
 
 	$('.custom-scrollbar').mCustomScrollbar();
 
@@ -174,7 +198,7 @@ $(function(){
 		if (!$(this).hasClass('opened'))
 		{
 			$('.content-services-wrap').slideDown('slow');
-			sectionSlide(false);
+			sectionSlide({direction: false});
 			$(this).addClass('opened');
 			$(this).text('Свернуть');
 		}
@@ -223,7 +247,7 @@ $(function(){
 			// Show portfolio
 			target.slideDown('slow');
 
-			sectionSlide(false);
+			sectionSlide({direction: false});
 
 			// Define slider
 			var slides = target.find('.slides');

@@ -1,19 +1,20 @@
 var isAnimate = false,
 	isScroll = false;
 
-$.fn.scrollTo = function(callback, opposite) {
+$.fn.scrollTo = function(data) {
 	if(!isAnimate){
 		isAnimate = true;
 
 	var offsetTop = $(this).offset().top,
 		headerHeight = $('.header').outerHeight(),
-		shift = opposite ? window.innerHeight - $(this).outerHeight() - headerHeight : 0;
+		shift = data.opposite ? window.innerHeight - $(this).outerHeight() - headerHeight : 0;
 
 		$('body, html').animate({
+			duration: data.speed || 'slow',
 			scrollTop : offsetTop - headerHeight - shift
 		}, function(){
 			isAnimate = false;
-			callback && callback();
+			data.callback && data.callback();
 			calculateRel();
 		});
 	}
@@ -29,9 +30,9 @@ $.fn.animatеScroll = function() {
 
 				if(target.length){
 					currentBox.attr('data-view', 'false');
-					target.attr('data-view', 'true').scrollTo(function(){
+					target.attr('data-view', 'true').scrollTo({callback: function(){
 						isScroll = false;
-					});
+					}});
 				} else {
 					isScroll = false;
 				}

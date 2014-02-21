@@ -516,13 +516,16 @@ label[for="service"]{
 
 /**
  *
- *	About page styles
+ *	Projects styles
  *
  */
 
 #projects{
 	display: none;
 	background-color: #0078BF;
+}
+#projects > div, .project-item{
+	display: none;
 }
 .content-wrap{
 	position: relative;
