@@ -10,9 +10,8 @@ $.fn.scrollTo = function(data) {
 		shift = data.opposite ? window.innerHeight - $(this).outerHeight() - headerHeight : 0;
 
 		$('body, html').animate({
-			duration: data.speed || 'slow',
 			scrollTop : offsetTop - headerHeight - shift
-		}, function(){
+		}, data.speed || 1500 ,function(){
 			isAnimate = false;
 			data.callback && data.callback();
 			calculateRel();

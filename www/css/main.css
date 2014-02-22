@@ -160,7 +160,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	-ms-box-shadow: 0 0 40px #555555;
 	-o-box-shadow: 0 0 40px #555555;
 	box-shadow: 0 0 40px #555;
-	z-index: 100;
+	z-index: 2000;
 }
 .h-top-wrap{
 	width: 100%;

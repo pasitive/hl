@@ -524,8 +524,11 @@ label[for="service"]{
 	display: none;
 	background-color: #0078BF;
 }
-#projects > div, .project-item{
+#projects > div{
 	display: none;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 }
 .content-wrap{
 	position: relative;
@@ -534,8 +537,8 @@ label[for="service"]{
 .nav-wrap{
 	position: fixed;
 	width: 100%;
-	top: 117px;
-	left: 0;
+	top: 118px;
+	left: 26px;
 	z-index: 10;
 }
 .nav-btns{
@@ -577,6 +580,13 @@ label[for="service"]{
 .close_but:hover{
 	background: url(/img/sprites.png) no-repeat scroll -149px -569px rgba(0, 0, 0, 0);
 }
+.slide-wrap{
+	position: relative;
+	overflow: hidden;
+}
+.project-item{
+	float: left;
+}
 .bg{
 	background: url(/img/page_project_bg_70percent_transp.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0.9);
 	bottom: 0;
@@ -591,7 +601,8 @@ label[for="service"]{
 .project-block h1{
 	font-size: 35px;
 	font-weight: normal;
-	margin: 30px 0 20px;
+	padding: 30px 0 20px;
+	margin: 0 0 0 20px;
 	color: #FFF;
 }
 .site-url{
@@ -619,10 +630,9 @@ label[for="service"]{
 }
 .p-slide-item img{
 	width: 900px;
-	margin-left: -20px;
 }
 .p-description{
-	margin: 0 0 40px;
+	margin: 0 0 40px 20px;
 }
 .p-left{
 	float: left;
@@ -684,6 +694,7 @@ label[for="service"]{
 
 .feedback-box {
 	padding: 20px 0 30px;
+	margin-left: 20px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	-ms-border-radius: 15px;

@@ -7,6 +7,25 @@ var position = {},
 			availHeight = avail <= maxHeight ? maxHeight : avail;
 		return availHeight;
 	},
+	calculateSlideWidth = function(){
+		$('.project-item').width(window.innerWidth);
+		$('.slide-wrap').each(function(){
+			var slidesNum = $(this).find('.project-item').length,
+				current = $(this).find('.project-item.current'),
+				currentId = current.attr('id');
+			$(this).width(window.innerWidth*slidesNum);
+			if(current && currentId){
+				$(this).css('left', (-1)*( currentId.replace(/\D/g, '') - 1)*window.innerWidth );
+				if(!current.prev().length){
+					$(this).parent().find('.prev-p').hide();
+				}
+				if(!current.next().length){
+					$(this).parent().find('.next-p').hide();
+				}
+			}
+		});
+
+	},
 	calculateRel = function(){
 		position = {};
 		$('[data-view]:visible').each(function(){
@@ -23,12 +42,20 @@ var position = {},
 
 			if(newBox.length){
 				currentBox.attr('data-view', 'false');
-				newBox.attr('data-view', 'true').scrollTo({
-					speed: data.speed,
-					callback: function(){
+				newBox.attr('data-view', 'true');
+				if(data.noAnimate){
+					setTimeout(function(){
+						document.body.scrollTop = position[newBox.data('section')] - headerHeight;
 						isScroll = false;
-					}
-				});
+					}, 0);
+				} else {
+					newBox.scrollTo({
+						speed: data.speed,
+						callback: function(){
+							isScroll = false;
+						}
+					});
+				}
 			} else {
 				isScroll = false;
 			}
@@ -89,6 +116,11 @@ var position = {},
 		$(window).unbind('scroll resize');
 		$(document).unbind('mousewheel');
 	},
+	attachProjectHandlers = function(){
+		$(window).bind('resize', function(){
+			calculateSlideWidth();
+		});
+	},
 	viewModule = {
 		'state': 'main',
 		'defineState': function(){
@@ -108,34 +140,58 @@ var position = {},
 		'stateHandler': {
 			'main': function(data){
 				var section = data[0] || '',
-					toHide = viewModule['state'].split('/');
+					toHide = viewModule['state'].split('/'),
+					l = toHide.length > 1 ? toHide.length - 1: toHide.length;
 
-				for(var i = 0; i < toHide.length; i++){
-				 	$('#' + toHide[i]).hide();
-				}
-				$('#main').fadeIn(1000, function(){
-					attachHomeHandlers();
-				});
+				for(var i = 0; i < l; i++){
+					$('#' + toHide[i]).hide();
+					}
+
+				$('#main').fadeIn(1000);
+
 				if(section){
-					sectionSlide({speed: 100, node: $('#' + section)});
-					//document.body.scrollTop = 0;
+					sectionSlide({noAnimate: true, node: $('#' + section)});
 				}
+
+				attachHomeHandlers();
 				viewModule['setState']('main');
 			},
 			'projects': function(data){
-				var project = data[0],
+				var current,
+					project = data[0],
 					section = data[1],
-					toHide = viewModule['state'].split('/');
+					toHide = viewModule['state'].split('/'),
+					l = toHide.length > 1 ? toHide.length - 1: toHide.length;
 
 				if(project && section){
-					for(var i = 0; i < toHide.length; i++){
+					for(var i = 0; i < l; i++){
 						$('#' + toHide[i]).hide();
 					}
+
 					detachHomeHandlers();
-					$('#' + project + ', #' + section).show();
-					document.body.scrollTop = 0;
+					attachProjectHandlers();
+
+					$('#' + project).show();
 					$('#projects').fadeIn(1000);
-					//$('html, body').scrollTo({speed:100});
+
+					setTimeout(function(){
+						document.body.scrollTop = 0;
+
+						$('#' + project + ' .slide-wrap').css( 'left', (-1)*( section.replace(/\D/g, '') - 1)*window.innerWidth );
+						current = $('#' + section).addClass('current');
+
+						if(!current.prev().length){
+							$('#' + project + ' .prev-p').hide();
+						} else {
+							$('#' + project + ' .prev-p').show();
+						}
+						if(!current.next().length){
+							$('#' + project + ' .next-p').hide();
+						} else {
+							$('#' + project + ' .next-p').show();
+						}
+					}, 0);
+
 					viewModule['setState']('projects/' + project + '/' + section);
 				} else {
 					viewModule['changeState']('main');
@@ -161,8 +217,10 @@ $(function(){
 	if(hash && hash != 'main'){
 		viewModule['changeState'](hash);
 	} else {
-		document.body.scrollTop = 0;
-		$('html, body').scrollTo({speed:100});
+		//$('html, body').scrollTo({speed:100});
+		setTimeout(function(){
+			document.body.scrollTop = 0;
+		}, 100);
 		$('#main').fadeIn('slow');
 	}
 
@@ -175,10 +233,76 @@ $(function(){
 		}, 500);
 	}
 
-	$('.portfolio .element, .close_but_anchor').click(function(e){
+	calculateSlideWidth();
+	attachProjectHandlers();
+
+	$('.portfolio .element').click(function(e){
 		e.preventDefault();
 		var href = $(this).attr('href').replace(/#/, '');
 		viewModule['changeState'](href);
+	});
+
+	$('.close_but_anchor').click(function(e){
+		e.preventDefault();
+		var href = $(this).attr('href').replace(/#/, '');
+		$(this).closest('.nav-wrap').parent().find('.current').removeClass('current');
+		viewModule['changeState'](href);
+	});
+
+	$('.prev-p').click(function(e){
+		e.preventDefault();
+		if(!isScroll){
+			isScroll = true;
+
+			var slider = $(this).closest('.nav-wrap').next('.slide-wrap'),
+				projectId = slider.parent().attr('id'),
+				current = slider.find('.current'),
+				prev = current.prev(),
+				prevId = prev.attr('id');
+
+			if(prev.length){
+				document.body.scrollTop = 0;
+				slider.animate({'left': (-1)*( prevId.replace(/\D/g, '') - 1)*window.innerWidth}, 1500, function(){
+					current.removeClass('current');
+					prev.addClass('current');
+
+					viewModule['setState']('projects/' + projectId + '/' + prevId);
+					isScroll = false;
+				});
+				if(!prev.prev().length){
+					$('#' + projectId + ' .prev-p').fadeOut('slow');
+				}
+				$('#' + projectId + ' .next-p').fadeIn('slow');
+			}
+		}
+	});
+
+	$('.next-p').click(function(e){
+		e.preventDefault();
+		if(!isScroll){
+			isScroll = true;
+
+			var slider = $(this).closest('.nav-wrap').next('.slide-wrap'),
+				projectId = slider.parent().attr('id'),
+				current = slider.find('.current'),
+				next = current.next(),
+				nextId = next.attr('id');
+
+			if(next.length){
+				document.body.scrollTop = 0;
+				slider.animate({'left': (-1)*( nextId.replace(/\D/g, '') - 1)*window.innerWidth}, 1500, function(){
+					current.removeClass('current');
+					next.addClass('current');
+
+					viewModule['setState']('projects/' + projectId + '/' + nextId);
+					isScroll = false;
+				});
+				if(!next.next().length){
+					$('#' + projectId + ' .next-p').fadeOut('slow');
+				}
+				$('#' + projectId + ' .prev-p').fadeIn('slow');
+			}
+		}
 	});
 
 	$('.custom-scrollbar').mCustomScrollbar();
