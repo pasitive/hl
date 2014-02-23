@@ -46,12 +46,14 @@ var position = {},
 				if(data.noAnimate){
 					setTimeout(function(){
 						document.body.scrollTop = position[newBox.data('section')] - headerHeight;
+						sideBarStatus();
 						isScroll = false;
 					}, 0);
 				} else {
 					newBox.scrollTo({
 						speed: data.speed,
 						callback: function(){
+							sideBarStatus();
 							isScroll = false;
 						}
 					});
@@ -61,21 +63,32 @@ var position = {},
 			}
 		}
 	},
+	sideBarStatus = function(){
+		var currentId = $('[data-view="true"]').attr('id').replace(/\-portfolio/, '');
+
+		$('#side-menu .active').removeClass('active');
+		$('#side-menu [data-target-scroll="#' + currentId + '"]').addClass('active');
+
+	},
 	defineFooterPos = function(){
-		var footer = $('.footer'),
-			lastSection = $('.content-ask-form-wrap'),
-			lastSectionContent = lastSection.find('.content-ask-form'),
-			marginBottom = lastSection.height() - lastSectionContent.height();
+		var lastSection = $('.content-ask-form-wrap'),
+			sectionPlaceholder = $('.section-placeholder'),
+			lastSectionContentHeight = lastSection.find('.content-ask-form').height() + lastSection.find('.form-bg').height(),
+			newHeight = lastSection.height() - lastSectionContentHeight,
+			phHeight = lastSection.height() - lastSectionContentHeight - $('.footer').height();
 
-		lastSection.css({
-			'height': lastSectionContent.height(),
-			'min-height': lastSectionContent.height(),
-			'margin-bottom': marginBottom
-		});
-
-		footer.css('margin-top', (-1)*marginBottom);
+		lastSection.css('min-height', newHeight);
+		sectionPlaceholder.css('min-height', phHeight);
 	},
 	attachHomeHandlers = function(){
+
+		/*Height by window resize*/
+		$(window).bind('resize', function(){
+			$('.full-height').css('min-height', countAvailHeight());
+			$('.inner-full-height').css('height', countAvailHeight());
+			defineFooterPos();
+		});
+
 		/*Handle scrolling by toddler*/
 		$(window).bind('scroll', function(){
 			if(!isAnimate){
@@ -91,6 +104,7 @@ var position = {},
 						if(sectionInView.length){
 							$('[data-view="true"]').attr('data-view', 'false');
 							sectionInView.attr('data-view', 'true');
+							sideBarStatus();
 							return;
 						}
 					}
@@ -98,12 +112,7 @@ var position = {},
 			}
 		});
 
-		/*Height by window resize*/
-		$(window).bind('resize', function(){
-			$('.full-height').css('min-height', countAvailHeight());
-			$('.inner-full-height').css('height', countAvailHeight());
-			defineFooterPos();
-		});
+		//if(isMobile)return;
 
 		/*Section sliding*/
 		$(document).bind('mousewheel', function(e, delta){
@@ -147,10 +156,18 @@ var position = {},
 					$('#' + toHide[i]).hide();
 					}
 
-				$('#main').fadeIn(1000);
+				if(isMobile){
+					$('#main').show();
+				} else {
+					$('#main').fadeIn(1000);
+				}
 
 				if(section){
 					sectionSlide({noAnimate: true, node: $('#' + section)});
+				} else {
+					setTimeout(function(){
+						$('html, body').scrollTo({speed:1});
+					}, 500);
 				}
 
 				attachHomeHandlers();
@@ -172,7 +189,12 @@ var position = {},
 					attachProjectHandlers();
 
 					$('#' + project).show();
-					$('#projects').fadeIn(1000);
+					if(isMobile){
+						$('#projects').show();
+						calculateSlideWidth();
+					} else {
+						$('#projects').fadeIn(1000);
+					}
 
 					setTimeout(function(){
 						document.body.scrollTop = 0;
@@ -217,11 +239,15 @@ $(function(){
 	if(hash && hash != 'main'){
 		viewModule['changeState'](hash);
 	} else {
-		//$('html, body').scrollTo({speed:100});
 		setTimeout(function(){
-			document.body.scrollTop = 0;
-		}, 100);
-		$('#main').fadeIn('slow');
+			$('html, body').scrollTo({speed:1});
+		}, 500);
+		if(isMobile){
+			$('#main').show();
+		} else {
+			$('#main').fadeIn(1000);
+		}
+
 	}
 
 	if(viewModule['state'] != 'main'){
@@ -314,7 +340,12 @@ $(function(){
 	}, 500);
 
 	$('.bubble-bounce .circle').bubbleBalance();
-	$('.bubble-bounce .circle').animatеScroll();
+	$('.bubble-bounce .circle').animatеScroll(function(){
+		sideBarStatus();
+	});
+	$('#side-menu li').animatеScroll(function(){
+		sideBarStatus();
+	});
 
 	/*Service list*/
 	$('.expand-toddler').click(function(){
@@ -413,7 +444,7 @@ $(function(){
 	});
 
 	/*Define footer shift fix*/
-	/*setTimeout(function(){
+	setTimeout(function(){
 		$(window).trigger('resize');
-	}, 500);*/
+	}, 500);
 });

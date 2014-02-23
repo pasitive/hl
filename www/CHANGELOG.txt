@@ -97,3 +97,14 @@ HTML/CSS:
 JS:
 
 - view module logic
+
+
+22.02.2014
+
+HTML/CSS:
+
+- Home page refactor
+
+JS:
+
+- view module logic

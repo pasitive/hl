@@ -1,5 +1,20 @@
-var isAnimate = false,
+var isMobile = /mobile|tablet|ipad|iphone|android/ig.test(navigator.userAgent),
+	isAnimate = false,
 	isScroll = false;
+
+jQuery.fx.interval = 10;
+
+$('link[href^="/css/"]').each(function(){
+	$.get($(this).attr('href'), function(data){
+		var links = data.match(/\/img\/[^)]+/g);
+		if(links){
+			for(var i = 0; i < links.length; i++){
+				new Image().src = links[i];
+			}
+		}
+	});
+});
+
 
 $.fn.scrollTo = function(data) {
 	if(!isAnimate){
@@ -19,7 +34,7 @@ $.fn.scrollTo = function(data) {
 	}
 };
 
-$.fn.animatеScroll = function() {
+$.fn.animatеScroll = function(callback) {
 	return this.each(function(){
 		$(this).click(function(){
 			if(!isScroll){
@@ -30,6 +45,7 @@ $.fn.animatеScroll = function() {
 				if(target.length){
 					currentBox.attr('data-view', 'false');
 					target.attr('data-view', 'true').scrollTo({callback: function(){
+						callback && callback();
 						isScroll = false;
 					}});
 				} else {
@@ -69,6 +85,8 @@ $.fn.staffElement = function(){
 	});
 };
 
+if(isMobile)$('html').addClass('mobile');
+
 $(function(){
 	/*Custom placeholder*/
 	$('input[type="text"], textarea').placeholder();
@@ -89,6 +107,9 @@ $(function(){
 	$('.t-pointer').click(function(){
 		var t = $(this);
 		$('.sub-footer-wrap').slideToggle('fast', function(){
+			if(!t.hasClass('up')){
+				$(this).scrollTo({opposite: true});
+			}
 			t.toggleClass('up');
 		});
 	});

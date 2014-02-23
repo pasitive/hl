@@ -23,7 +23,13 @@ img{
 	outline: none;
 }
 a:active, a:focus, a:hover{
-	text-decoration: none;
+	text-decoration: none !important;
+	border-bottom: none !important;
+	outline: none;
+}
+a:hover{
+	text-decoration: none !important;
+	border-bottom: none !important;
 	outline: none;
 }
 input:focus, input:hover{
@@ -148,7 +154,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 .container{
 	position: relative;
 	width: 100%;
-	min-width: 900px;
+	min-width: 1000px;
 }
 .header{
 	position: fixed;
@@ -178,11 +184,15 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 }
 .phone-wrap{
 	float: left;
-	margin: 25px 0 0 415px;
+	margin: 27px 0 0 415px;
 }
 .phone-wrap a{
+	display: inline-block;
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	height: 22px;
+	line-height: 22px;
 	font-size: 22px;
+	vertical-align: bottom;
 }
 .callback-wrap{
 	float: right;
@@ -191,7 +201,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 .callback-btn{
 	width: 109px;
 	height: 24px;
-	line-height: 22px;
+	line-height: 23px;
 	text-align: center;
 	font-size: 11px;
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
@@ -244,7 +254,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 
 .content{
 	width: 100%;
-	padding-top: 120px;
+	padding-top: 118px;
 }
 .content-wrap{
 	width: 900px;
@@ -261,12 +271,12 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
-	background: url(/img/footer_bg.png) 0 0 repeat-x;
+	background: url(/img/footer_bg_s.png) 0 0 repeat-x;
 }
 .f-top{
 	width: 900px;
-	height: 54px;
-	padding: 40px 0;
+	height: 56px;
+	padding: 22px 0;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -284,6 +294,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	width: 134px;
 	margin-right: 5px;
 	font-size: 13px;
+	line-height: 18px;
 	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 	color: #4d4d4f;
 }
@@ -501,6 +512,7 @@ a.vk {
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	line-height: 20px;
 	outline: none;
 }
 .cs-container .cs-scrollbar {
@@ -651,7 +663,7 @@ a.vk {
 	float: left;
 }
 .row-fluid .span6 {
-	width: 24.25000119999808%;
+	width: 205px;
 }
 .portfolio img {
 	max-width: 100%;
@@ -851,8 +863,8 @@ a.vk {
 
 .textarea-wrap{
 	width: 500px;
-	margin: 15px 0;
-	padding: 5px 15px;
+	margin: 13px 0;
+	padding: 7px 15px;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
