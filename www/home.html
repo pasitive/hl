@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.selectbox-0.2.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="/plugin/jquery.isotope.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.cycle.plugin.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.cs.js"></script>
@@ -149,12 +150,14 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<hr>
-				<div class="main-expo">
-					<h1 class="our-service">наши услуги</h1>
-					<span class="expand-toddler">Развернуть</span>
+				<div class="main-expo-wrap">
+					<hr>
+					<div class="main-expo">
+						<h1 class="our-service">наши услуги</h1>
+						<span class="expand-toddler">Развернуть</span>
+					</div>
+					<hr>
 				</div>
-				<hr>
 			</div>
 		</div>
 	</div>
@@ -162,6 +165,14 @@
 	<div id="our-services" class="content-services-wrap scroll-section full-height" data-section="services" data-view="false">
 		<div class="content-services">
 			<div class="content-box inner-full-height">
+				<div class="main-expo-wrap">
+					<hr>
+					<div class="main-expo">
+						<h1 class="our-service">наши услуги</h1>
+						<span class="expand-toddler opened">Свернуть</span>
+					</div>
+					<hr>
+				</div>
 				<div class="services">
 					<ul class="our-services-list-index">
 						<li class="active"><span>Мобильный маркетинг</span></li>
@@ -476,8 +487,8 @@
 				<div class="clearfix"></div>
 				<div class="options-wrap">
 					<div class="portfolio-btn" data-target="#happyvideo-portfolio" data-hide-text="Скрыть наши работы" data-show-text="Посмотреть наши работы" data-opened="false">Посмотреть наши работы</div>
-					<a href="/actors/" class="actors-btn">Актеры</a>
-					<a href="/demo/" class="demo-btn">Демо</a>
+					<a href="#actors" class="actors-btn">Актеры</a>
+					<a href="#demo" class="demo-btn">Демо</a>
 					<a href="/services/" class="service-btn">Услуги</a>
 				</div>
 			</div>
@@ -3034,8 +3045,152 @@
 		</div>
 </div>
 
-<div id="actors">
+<div id="actors" class="content">
+	<div class="content-wrap">
+		<a class="close_but_anchor" href="#main/happyvideo">
+			<div class="close_but">
+			</div>
+		</a>
+		<div class="actors-sub-menu-wrap">
+			<ul class="actors-sub-menu" data-option-key="filter">
+				<li data-option-value="*" class="active"><a href="javascript: void(0);">все</a></li>
+				<li id="bx_2037796212_1" data-option-value=".woman"><a href="javascript: void(0);">женщины</a></li>
+				<li id="bx_2037796212_2" data-option-value=".man"><a href="javascript: void(0);">мужчины</a></li>
+				<li id="bx_2037796212_3" data-option-value=".character"><a href="javascript: void(0);">персонажи</a></li>
+				<li id="bx_2037796212_4" data-option-value=".child"><a href="javascript: void(0);">дети</a></li>
+				<li id="bx_2037796212_5" data-option-value=".star"><a href="javascript: void(0);">медийные персоны</a></li>
+			</ul>
+		</div>
+		<hr>
+		<div class="actors-block">
 
+			<h1>HappyVideo<br>Актеры</h1>
+			<p>Мониторинг активности тормозит экспериментальный рекламный блок, не считаясь с затратами. Лидерство в продажах, согласно Ф.Котлеру, создает комплексный пак-шот, невзирая на действия конкурентов. Медиабизнес, вопреки мнению П.Друкера, создает план размещения, отвоевывая свою долю рынка. Надо сказать, что стратегическое планирование амбивалентно.</p>
+
+			<div class="actors">
+				<div class="element woman">
+					<div class="img">
+						<img src="/img/1a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element man">
+					<div class="img">
+						<img src="/img/2a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element woman">
+					<div class="img">
+						<img src="/img/3a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element woman star">
+					<div class="img">
+						<img src="/img/4a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element man">
+					<div class="img">
+						<img src="/img/5a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element woman">
+					<div class="img">
+						<img src="/img/6a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element woman">
+					<div class="img">
+						<img src="/img/7a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element man child star">
+					<div class="img">
+						<img src="/img/8a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element woman">
+					<div class="img">
+						<img src="/img/9a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element character">
+					<div class="img">
+						<img src="/img/10a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element character">
+					<div class="img">
+						<img src="/img/11a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+				<div class="element character">
+					<div class="img">
+						<img src="/img/12a.png" alt=""/>
+					</div>
+					<div class="actor-name">
+						<span>Дмитрий Коренченко</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div id="demo" class="content">
+	<div class="content-wrap">
+		<a class="close_but_anchor" href="#main/happyvideo">
+			<div class="close_but">
+			</div>
+		</a>
+		<div class="demo-block">
+			<h1>HappyVideo. Демо</h1>
+
+			<form action="" method="post">
+				<input type="text" name="demo" placeholder="Введите адрес вашего сайта"/>
+				<input type="submit" value="Play"/>
+			</form>
+
+			<p>Лучше один раз увидеть, как именно будет работать HappyVideo на вашем сайте.</p>
+			<p><span class="medium">Попробуйте нашу демо-версию:</span> введите адрес вашего сайта, нажмите кнопку Play и посмотрите, что произойдет.</p>
+			<p>Мы приглашаем профессиональных актеров  и ведущих участвовать в наших проектах. Чтобы стать видеоспикером, напишите или позвоните нам.</p>
+
+		</div>
+	</div>
 </div>
 
 <!--footer-->

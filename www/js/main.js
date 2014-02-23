@@ -2,7 +2,7 @@ var isMobile = /mobile|tablet|ipad|iphone|android/ig.test(navigator.userAgent),
 	isAnimate = false,
 	isScroll = false;
 
-jQuery.fx.interval = 10;
+jQuery.fx.interval = 13;
 
 $('link[href^="/css/"]').each(function(){
 	$.get($(this).attr('href'), function(data){
@@ -14,6 +14,47 @@ $('link[href^="/css/"]').each(function(){
 		}
 	});
 });
+
+$.fn.metafizzyFilter = function(filterSelector) {
+	return this.each(function(){
+
+		var $container = $(this);
+
+		$container.isotope({
+			itemSelector : '.element'
+		});
+
+		var $optionSets = $(filterSelector),
+			$optionLinks = $optionSets.find('li:not(.no-selectable)');
+
+		$optionLinks.click(function(){
+			var $this = $(this);
+
+			// don't proceed if already selected
+			if ( $this.hasClass('active') ) {
+				return false;
+			}
+			var $optionSet = $this.parent();
+			$optionSet.find('.active').removeClass('active');
+			$this.addClass('active');
+
+			// make option object dynamically, i.e. { filter: '.my-filter-class' }
+			var options = {},
+				key = $optionSet.attr('data-option-key'),
+				value = $this.attr('data-option-value');
+			// parse 'false' as false boolean
+			value = value === 'false' ? false : value;
+			options[ key ] = value;
+			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+				// changes in layout modes need extra logic
+				changeLayoutMode( $this, options )
+			} else {
+				// otherwise, apply new options
+				$container.isotope( options );
+			}
+		});
+	});
+};
 
 
 $.fn.scrollTo = function(data) {
@@ -85,7 +126,7 @@ $.fn.staffElement = function(){
 	});
 };
 
-if(isMobile)$('html').addClass('mobile');
+if(isMobile)$('html').addClass('mobile-os');
 
 $(function(){
 	/*Custom placeholder*/
