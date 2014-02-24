@@ -1,0 +1,62 @@
+/**
+ *
+ *	Account page styles
+ *
+ */
+
+.sub-menu-wrap{
+	width: 100%;
+	margin: 20px 0;
+	text-align: center;
+}
+.sub-menu-wrap li{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 35px;
+	text-align: center;
+}
+.sub-menu-wrap li a{
+	line-height: 24px;
+	font-size: 24px;
+	color: #393838;
+	font-weight: normal;
+}
+.sub-menu-wrap li.selected a{
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.sub-menu-wrap li a:hover{
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+	color: #34B4AC;
+}
+.acc-name{
+	padding-bottom: 10px;
+}
+.account-block h1, .acc-name h1{
+	font-size: 35px;
+	font-weight: normal;
+	padding: 50px 0 10px;
+	margin: 0;
+}
+.acc-name{
+	position: relative;
+	margin-bottom: 10px;
+}
+.acc-site{
+	font-size: 17px;
+	color: #2db9b4;
+	text-decoration: underline;
+}
+.acc-logo{
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+	width: 136px;
+	height: 61px;
+	background: url(/img/acc-logo.png) no-repeat 0 0;
+}
+.account-block p{
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
