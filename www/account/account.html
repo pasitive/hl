@@ -9,11 +9,13 @@
 	<script type="text/javascript" src="/lib/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.selectbox-0.2.min.js"></script>
+	<script type="text/javascript" src="/plugin/jquery-ui-1.10.4.custom.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.placeholder.min.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.cycle.plugin.js"></script>
 	<script type="text/javascript" src="/plugin/jquery.cs.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/account.js"></script>
 </head>
 <body>
 <div class="container">
@@ -42,7 +44,7 @@
 				<li>
 					<a href="/projects/">ПРОЕКТЫ</a>
 				</li>
-				<li class="selected">
+				<li>
 					<a href="/about/">О НАС</a>
 				</li>
 				<li>
@@ -70,15 +72,191 @@
 		<div class="sub-menu-wrap">
 			<ul class="sub-menu">
 				<li class="selected">
-					<a href="#">профиль</a>
+					<a class="account-details" href="#">профиль</a>
 				</li>
 				<li>
-					<a href="#">проекты</a>
+					<a class="account-projects" href="#">проекты</a>
 				</li>
 			</ul>
 		</div>
 		<hr>
 		<div class="account-content">
+			<div class="left-side">
+				<h4>Контактное лицо</h4>
+				<form action="" method="post">
+					<input name="name" type="text" placeholder="ФИО"/>
+					<input name="position" type="text" placeholder="Должность"/>
+					<input name="mail" type="text" placeholder="Эл. почта"/>
+					<input name="phone" type="text" placeholder="Телефон"/>
+					<input class="add-contact-person" type="submit" value="Добавить контактное лицо"/>
+				</form>
+				<div class="login-pass">
+					<h4>Логин и пароль</h4>
+					<p>
+						<span class="login-text">логин</span> 111111<br>
+						<span class="pass-text">пароль</span> 123456
+					</p>
+				</div>
+				<div class="pass-change">
+					<h4>Изменить пароль</h4>
+					<form action="" method="post">
+						<input name="current-pass" type="text" placeholder="Ведите текущий пароль"/>
+						<input name="new-pass" type="text" placeholder="Ведите новый пароль"/>
+						<input name="confirm" type="text" placeholder="Подтвердите новый пароль"/>
+						<input class="save-pass-btn" type="submit" value="Сохранить"/>
+					</form>
+				</div>
+				<div class="logo-dl">
+					<h4>Логотип <span>(загрузить / изменить)</span></h4>
+					<a class="logo-dl-btn" href="#">Загрузить изображение</a>
+				</div>
+			</div>
+			<div class="right-side">
+				<div class="contact-person">
+					<h4>Ваш менеджер HappyVideo</h4>
+					<p>
+						<b>Зайцева Александра</b><br>
+						эл. почта <a href="mailto:az.happylab.ru">az.happylab.ru</a><br>
+						моб. тел. +7 999 999-99-99<br>
+						доб. номер 105
+					</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="projects-content">
+			<div class="projects-wrap">
+				<div class="left-side">
+					<div class="project-list">
+						<h4>Ваши проекты</h4>
+						<ul>
+							<li><a href="#" data-project="hb-video">видео «День рождения»</a></li>
+							<li><a href="#" data-project="hp-video">видео «Главная страница»</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right-side">
+					<div class="contact-person">
+						<h4>Ваш менеджер HappyVideo</h4>
+						<p>
+							<b>Зайцева Александра</b><br>
+							эл. почта <a href="mailto:az.happylab.ru">az.happylab.ru</a><br>
+							моб. тел. +7 999 999-99-99<br>
+							доб. номер 105
+						</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="projects-preferences">
+				<div id="hb-video">
+					<h2>Видео «День рождение»</h2>
+					<div class="p-state">
+						<img src="/img/hb-pic.png" alt=""/>
+						<h4>Состав проекта</h4>
+						<p>
+							ролик live — бесконечно<br>
+							ролик main — 30 сек.<br>
+							ролик main 2 — 30 сек.
+						</p>
+						<p>
+							Дата начала показов 20.04.2013<br>
+							Дата оканчания показов 20.04.20124
+						</p>
+					</div>
+					<div class="p-options">
+						<ul>
+							<li class="p-statistic">
+								<a class="expand-btn" href="#">Статистика показов</a>
+								<div class="p-item">
+									<h3>Выберите ролик</h3>
+									<select name="movie" id="movie">
+										<option value="main">main</option>
+										<option value="live">live</option>
+									</select>
+									<h3>Период</h3>
+									<div class="term-range">
+										<span>С </span>
+										<input name="from-date" type="text"/>
+										<span> по </span>
+										<input name="to-date" type="text"/>
+										<span>&nbsp;</span>
+										<a class="set-range" href="#">Показать</a>
+									</div>
+									<p>
+										Общее количество:<br>
+										Количество уникальных показов:<br>
+										Среднее время просмотра:<br>
+										Среднее время ожидания просмотра:<br>
+										Показатель отказов по уникальным посетителям:
+									</p>
+									<div class="report-wrap">
+										<a class="report-pdf" href="">Отчет в PDF</a>
+										<a class="report-csv" href="">Отчет в csv</a>
+									</div>
+								</div>
+							</li>
+							<li class="p-preferences">
+								<a class="expand-btn" href="#">Настройки</a>
+								<div class="p-item">
+									<h4>Домены для размещения:</h4>
+									<div class="domain">
+										<input name="domain" type="text"/>
+										<a class="add-domain" href="#">Добавить домен</a>
+									</div>
+									<div class="view-limit">
+										<h4>Ограничение показов:</h4>
+										<ul>
+											<li><label><input name="view" type="radio" value="default"/>Всем по умолчанию</label></li>
+											<li><label><input name="view" type="radio" value="default"/>Всем по умолчанию</label></li>
+											<li><label><input name="view" type="radio" value="range-exclude"/>Запрет на показ для указанных IP-адресов</label></li>
+											<li><input name="range-excl" type="text"/></li>
+											<li><a class="add-ip" href="#">Добавить IP-адрес</a></li>
+											<li><label><input name="view" type="radio" value="range-include"/>Только для указанных IP-адресов</label></li>
+											<li><input name="range-incl" type="text"/></li>
+											<li><a class="add-ip" href="#">Добавить IP-адрес</a></li>
+										</ul>
+									</div>
+									<div class="view-start">
+										<h4>Условия начала показа ролика:</h4>
+										<ul>
+											<li><label><input name="view-start" type="radio" value="auto"/>Автовоспроизведение</label></li>
+											<li><label><input name="view-start" type="radio" value="main-live"/>Cначала main, затем live</label></li>
+											<li><label><input name="view-start" type="radio" value="live-main"/>Cначала live, затем main</label></li>
+										</ul>
+									</div>
+									<div class="view-end">
+										<h4>Условия окончания показа ролика:</h4>
+										<ul>
+											<li><label><input name="view-end" type="radio" value="stop"/>Стоп-кадр</label></li>
+											<li><label><input name="view-end" type="radio" value="close"/>Закрытие</label></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="p-change-log">
+								<a class="expand-btn" href="#">История изменений</a>
+								<div class="p-item">
+								</div>
+							</li>
+							<li class="p-notification">
+								<a class="expand-btn" href="#">Напоминания</a>
+								<div class="p-item">
+									<h4>Присылать уведомления за:</h4>
+									<ul>
+										<li><label><input name="notification" type="radio" value="month"/>Месяц</label></li>
+										<li><label><input name="notification" type="radio" value="2-weeks"/>2 недели</label></li>
+										<li><label><input name="notification" type="radio" value="week"/>Неделю</label></li>
+										<li><label><input name="notification" type="radio" value="2-days"/>2 дня</label></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<a href="#" class="save-btn">Сохранить</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 </div>

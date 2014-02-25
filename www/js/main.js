@@ -2,8 +2,10 @@ var isMobile = /mobile|tablet|ipad|iphone|android/ig.test(navigator.userAgent),
 	isAnimate = false,
 	isScroll = false;
 
+/*Redefine animation frequency*/
 jQuery.fx.interval = 13;
 
+/*Preload images*/
 $('link[href^="/css/"]').each(function(){
 	$.get($(this).attr('href'), function(data){
 		var links = data.match(/\/img\/[^)]+/g);
@@ -15,6 +17,7 @@ $('link[href^="/css/"]').each(function(){
 	});
 });
 
+/*Isotop filter*/
 $.fn.metafizzyFilter = function(filterSelector) {
 	return this.each(function(){
 
@@ -56,7 +59,7 @@ $.fn.metafizzyFilter = function(filterSelector) {
 	});
 };
 
-
+/*Scroll to element method*/
 $.fn.scrollTo = function(data) {
 	if(!isAnimate){
 		isAnimate = true;
@@ -70,11 +73,12 @@ $.fn.scrollTo = function(data) {
 		}, data.speed || 1500 ,function(){
 			isAnimate = false;
 			data.callback && data.callback();
-			calculateRel();
+			typeof calculateRel == 'function' && calculateRel();
 		});
 	}
 };
 
+/*Scroll to section by anchor*/
 $.fn.animatеScroll = function(callback) {
 	return this.each(function(){
 		$(this).click(function(){
@@ -98,6 +102,7 @@ $.fn.animatеScroll = function(callback) {
 	});
 };
 
+/*Find closest sibling method*/
 $.fn.findSiblingByClass = function(className, oppositeDirection){
 	var t = $(this), sibling;
 		do{
@@ -113,6 +118,7 @@ $.fn.findSiblingByClass = function(className, oppositeDirection){
 	return [];
 };
 
+/*Staff element handler*/
 $.fn.staffElement = function(){
 	var foundedElements = 'img.colored, .text';
 	var methods = navigator.userAgent.indexOf('MSIE 8.0') == -1 ? ['fadeIn', 'fadeOut'] : ['show', 'hide'];
@@ -126,6 +132,7 @@ $.fn.staffElement = function(){
 	});
 };
 
+/*Define mobile style*/
 if(isMobile)$('html').addClass('mobile-os');
 
 $(function(){
@@ -145,6 +152,7 @@ $(function(){
 		}
 	});
 
+	/*Sub-footer toddler*/
 	$('.t-pointer').click(function(){
 		var t = $(this);
 		$('.sub-footer-wrap').slideToggle('fast', function(){
@@ -155,10 +163,12 @@ $(function(){
 		});
 	});
 
+	/*Prevent sub-menu jumping by hover*/
 	$('.sub-menu li').each(function(){
 		$(this).css({'width': $(this).outerWidth(), 'padding': 0});
 	});
 
+	/*Overlay handlers*/
 	$('.callback-btn').click(function(){
 		$('.overlay, .popup-wrap').fadeIn('slow');
 	});

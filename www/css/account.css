@@ -29,6 +29,9 @@
 	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
 	color: #34B4AC;
 }
+.account-content{
+	padding-bottom: 50px;
+}
 .acc-name{
 	padding-bottom: 10px;
 }
@@ -59,4 +62,236 @@
 	font-size: 15px;
 	line-height: 20px;
 	margin-bottom: 10px;
+}
+.account-content h4,
+.projects-content h4{
+	font-size: 15px;
+	font-weight: normal;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+	color: #393838;
+}
+.account-content input[type="text"]{
+	min-height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
+	color: #4d4d4f;
+}
+.left-side{
+	float: left;
+	width: 430px;
+}
+.right-side{
+	float: right;
+	margin-right: 70px;
+}
+.add-contact-person{
+	height: 34px;
+	line-height: 30px;
+	width: 233px;
+	padding: 0 15px 0 33px;
+	margin: 10px 0 0;
+	background: url(/img/acc-btn.png) no-repeat 0 0;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	color: #FFF;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.add-contact-person:hover{
+	background-position: -233px 0;
+}
+.login-pass{
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+	color: #393838;
+}
+.login-pass span{
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
+}
+.save-pass-btn{
+	height: 34px;
+	line-height: 32px;
+	width: 112px;
+	margin: 10px 0 0;
+	background: url(/img/acc-sprite.png) no-repeat 0 0;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	color: #FFF;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.save-pass-btn:hover{
+	background-position: -112px 0;
+}
+.logo-dl h4{
+	margin-bottom: 0;
+}
+.logo-dl h4 span{
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
+}
+.logo-dl-btn{
+	display: block;
+	height: 32px;
+	line-height: 30px;
+	width: 196px;
+	margin: 10px 0 0;
+	background: url(/img/acc-btn.png) no-repeat 0 -34px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	color: #4d4d4f;
+	text-align: center;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.logo-dl-btn:hover{
+	background-position: -196px -34px;
+}
+.contact-person{
+	font-size: 15px;
+	line-height: 20px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	color: #393838;
+}
+.contact-person b{
+	font-size: 17px;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+}
+.contact-person a{
+	text-decoration: underline;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+	color: #2db9b4;
+}
+.projects-content{
+	display: none;
+	padding-bottom: 50px;
+}
+.p-state img{
+	cursor: pointer;
+}
+.project-list a{
+	text-decoration: underline;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	color: #2db9b4;
+}
+.projects-preferences > div{
+	display: none;
+}
+.projects-preferences h2{
+	color: #393838;
+	font-size: 25px;
+	font-weight: normal;
+}
+.projects-preferences h3{
+	color: #393838;
+	font-size: 15px;
+	font-weight: normal;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
+}
+.projects-preferences p{
+	margin-bottom: 10px;
+	font-size: 15px;
+	color: #393838;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+}
+.p-options > ul > li{
+	margin: 20px 0;
+}
+.p-options .expand-btn{
+	display: inline-block;
+	position: relative;
+	height: 21px;
+	line-height: 21px;
+	padding-left: 30px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+	color: #2db9b4;
+	text-decoration: underline;
+}
+.p-options .expand-btn:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 21px;
+	height: 21px;
+	background: url(/img/acc-sprite.png) no-repeat 0 -90px;
+}
+.p-options .expand-btn.opened:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 21px;
+	height: 21px;
+	background: url(/img/acc-sprite.png) no-repeat 0 -68px;
+}
+.p-item p{
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+}
+.p-item .sbHolder{
+	width: 90px;
+	background: url(/img/acc-sprite.png) no-repeat -224px 0;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	border: none;
+	outline: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+.p-item .sbToggle{
+	background-image: none;
+}
+.p-item .sbOptions{
+	width: 90px;
+}
+.term-range{
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
+	margin-bottom: 10px;
+}
+.term-range > *{
+	display: inline-block;
+	vertical-align: top;
+	height: 30px;
+	line-height: 30px;
+}
+.term-range input{
+	min-height: 30px;
+	padding-right: 40px;
+	width: 150px;
+	margin-bottom: 0;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
+	background: #FFF url(/img/calendar-icon.png) no-repeat 115px center;
+	cursor: pointer;
+}
+.set-range, .report-pdf, .report-csv{
+	display: inline-block;
+	vertical-align: top;
+	height: 34px;
+	width: 112px;
+	line-height: 32px;
+	background: url(/img/acc-sprite.png) no-repeat 0 0;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #FFF;
+}
+.set-range:hover,.report-pdf:hover, .report-csv:hover{
+	background-position: -112px 0;
+}
+.report-wrap{
+	margin: 20px 0 0;
+}
+.report-csv{
+	margin-left: 30px;
 }

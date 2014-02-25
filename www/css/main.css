@@ -327,6 +327,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 }
 .contacts-wrap .mail{
 	font-family: 'HelveticaNeueCyrRoman', Helvetica, Arial, sans-serif;
+}
+.contacts-wrap .mail a{
 	text-decoration: underline;
 }
 .follow-us-wrap{
@@ -1056,6 +1058,9 @@ a.vk {
 ----------------------------------*/
 
 /* Overlays */
+#ui-datepicker-div{
+	z-index: 100 !important;
+}
 .ui-widget-overlay {
 	position: fixed;
 	top: 0;

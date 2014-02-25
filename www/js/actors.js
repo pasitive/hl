@@ -1,6 +1,5 @@
-/**
- * Actors filter
- */
+/*Actors filter*/
+
 $.fn.metafizzyFilter = function(filterSelector) {
 	return this.each(function(){
 
