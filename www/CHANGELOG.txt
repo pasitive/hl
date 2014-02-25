@@ -108,3 +108,17 @@ HTML/CSS:
 JS:
 
 - view module logic
+
+
+24.02.2014
+
+HTML/CSS/JS:
+
+- Office_1 layout
+
+
+25.02.2014
+
+HTML/CSS/JS:
+
+- Office_2-3 layout

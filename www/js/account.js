@@ -27,6 +27,14 @@ $(function(){
 		$('#' + $(this).data('project')).fadeIn('slow');
 	});
 
+	/*project options*/
+
+	$('.expand-btn').click(function(e){
+		e.preventDefault();
+		$(this).next('.p-item').slideToggle('slow');
+		$(this).toggleClass('opened');
+	});
+
 	/*datepicker*/
 
 	$('[name="from-date"], [name="to-date"]').datepicker();

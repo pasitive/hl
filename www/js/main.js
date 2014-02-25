@@ -132,6 +132,14 @@ $.fn.staffElement = function(){
 	});
 };
 
+/*Custom radio button*/
+$.fn.customRadio = function(){
+	$(this).click(function(){
+		$('[name="' + $(this).attr('name') + '"]').parent('label').removeClass('checked');
+		$(this).parent('label').addClass('checked');
+	});
+};
+
 /*Define mobile style*/
 if(isMobile)$('html').addClass('mobile-os');
 
@@ -151,6 +159,9 @@ $(function(){
 			$(inst.input).next().removeClass('opened');
 		}
 	});
+
+	/*custom radio buttons*/
+	$('[type="radio"]').customRadio();
 
 	/*Sub-footer toddler*/
 	$('.t-pointer').click(function(){

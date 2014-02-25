@@ -230,9 +230,28 @@
 	height: 21px;
 	background: url(/img/acc-sprite.png) no-repeat 0 -68px;
 }
+.p-item{
+	display: none;
+	width: 470px;
+}
+.p-item li{
+	margin-bottom: 5px;
+}
+.p-item li.left-shift{
+	margin-bottom: 0px;
+}
+.p-item li.top-shift{
+	margin-top: 10px;
+}
 .p-item p{
 	font-size: 15px;
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+}
+.p-item input[type="text"]{
+	min-height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLightItalic', Helvetica, Arial, sans-serif;
 }
 .p-item .sbHolder{
 	width: 90px;
@@ -252,6 +271,28 @@
 }
 .p-item .sbOptions{
 	width: 90px;
+}
+.p-item label{
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	min-height: 20px;
+	padding-left: 20px;
+	line-height: 20px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	background: url(/img/acc-sprite.png) no-repeat -27px -69px;
+}
+.p-item label.checked{
+	background-position: -27px -90px;
+}
+.p-item input[type="radio"]{
+	position: absolute;
+	left: -40px;
+	top: 0;
+}
+.p-preferences h4{
+	margin-bottom: 10px;
 }
 .term-range{
 	font-size: 15px;
@@ -294,4 +335,40 @@
 }
 .report-csv{
 	margin-left: 30px;
+}
+.add-domain, .add-ip{
+	display: block;
+	height: 34px;
+	width: 135px;
+	padding: 0 15px 0 33px;
+	line-height: 32px;
+	background: url(/img/acc-sprite.png) no-repeat 0 -34px;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #FFF;
+}
+.add-domain:hover, .add-ip:hover{
+	background-position: -183px -34px;
+}
+.left-shift{
+	margin-left: 20px;
+}
+.save-btn{
+	display: inline-block;
+	background: url(/img/sprites.png) no-repeat 0 -31px;
+	background-position: 15px -3465px;
+	height: 48px;
+	width: 171px;
+	line-height: 48px;
+	font-size: 17px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	color: #FFF;
+	border: none;
+	outline: none;
+	text-align: center;
+	cursor: pointer;
+}
+.save-btn:hover{
+	background-position: 15px -3515px;
 }
