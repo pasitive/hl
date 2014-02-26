@@ -39,6 +39,18 @@
 	font-weight: normal;
 	margin: 30px 0 20px;
 }
+.about-block h3{
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+.about-block h4{
+	font-size: 15px;
+	font-weight: normal;
+}
+.list-title h4{
+	margin-bottom: 10px;
+}
 .about-block p{
 	font-size: 15px;
 	line-height: 20px;
@@ -54,11 +66,30 @@
 	margin-bottom: 15px;
 	font-size: 15px;
 }
-.list-title .medium, .vacancies-list .medium{
-	display: block;
-}
-.vacancies-list li{
+.vacancies-list li a{
 	color: #2db9b4;
 	text-decoration: underline;
 	cursor: pointer;
+}
+.list-item{
+	display: none;
+	margin-left: 10px;
+}
+.marker li{
+	position: relative;
+	padding-left: 20px;
+	min-height: 20px;
+	line-height: 20px;
+	margin-left: 10px;
+}
+.marker li:before{
+	content: '—';
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 20px;
+	line-height: 20px;
+}
+.schedule{
+	margin-left: 10px;
 }

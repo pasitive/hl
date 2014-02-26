@@ -70,6 +70,20 @@
 	text-align: center;
 	color: #FFF;
 }
+.s-pic a{
+	display: block;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 16px;
+	text-align: center;
+	color: #FFF;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+}
 .web .s-pic{
 	background: url(/img/web_small_bg_100_per.jpg) no-repeat 0 0;
 }

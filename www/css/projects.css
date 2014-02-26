@@ -123,10 +123,11 @@
 	vertical-align: middle;
 	display: table-cell;
 	width: 160px;
+	padding: 10px;
 	text-align: center;
 	color: white;
-	font-size: 17px;
-	font-family: 'HelveticaNeueCyrUltraLight', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 }
 
 .seo-box, .smm-box{
