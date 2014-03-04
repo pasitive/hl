@@ -115,7 +115,7 @@
 #side-menu ul li.video .hint {
 	background: #39b54a;
 }
-
+/*
 .mobile-os .scroll-section {
 	background-image: none !important;
 }
@@ -124,7 +124,7 @@
 }
 .mobile-os .sub-footer-toddler {
 	background-image: none !important;
-}
+}*/
 #main{
 	display: none;
 }
@@ -420,8 +420,8 @@
 	display: block;
 }
 .content-web-wrap{
-	background: #C12E26 url(/img/background_web.jpg) no-repeat center;
-	background-size: 100% 100%;
+	background: #D5332B url(/img/HL_pattern_color_red.png) no-repeat center;
+
 }
 .content-box li, .content-box p{
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
@@ -514,8 +514,7 @@
 	overflow: hidden;
 }
 .content-mobile-wrap{
-	background: #6A3971 url(/img/background_mobile.jpg) no-repeat center;
-	background-size: 100% 100%;
+	background: #954F9F url(/img/HL_pattern_color_violet.png) no-repeat center;
 }
 .content-mobile .right-side{
 	width: 446px;
@@ -525,8 +524,7 @@
 	background-size: 446px;
 }
 .content-video-wrap{
-	background: #309F41 url(/img/background_video.jpg) no-repeat center;
-	background-size: 100% 100%;
+	background: #00AE3C url(/img/HL_pattern_color_green.png) no-repeat center;
 }
 .content-video .right-side{
 	width: 403px;
@@ -535,8 +533,7 @@
 	background: url(/img/happyvideo.png) no-repeat center;
 }
 .content-seo-wrap{
-	background: #EB8D1C url(/img/background_seo.jpg) no-repeat center;
-	background-size: 100% 100%;
+	background: #F8AC16 url(/img/HL_pattern_color_orange.png) no-repeat center;
 }
 .content-seo .right-side{
 	width: 446px;
@@ -545,8 +542,7 @@
 	background: url(/img/happyseo.png) no-repeat -40px;
 }
 .content-smm-wrap{
-	background: #0072AE url(/img/background_smm.jpg) no-repeat center;
-	background-size: 100% 100%;
+	background: #0081B3 url(/img/HL_pattern_color_blue.png) no-repeat center;
 }
 .content-smm .right-side{
 	width: 434px;
@@ -567,8 +563,7 @@
 }
 .form-bg{
 	width: 100% !important;
-	background: #44ABAA url(/img/background_contact.jpg) no-repeat center;
-	background-size: 100% 200%;
+	background: #68CAC8 url(/img/HL_pattern_color_green_happy.png) no-repeat center;
 }
 .content-form{
 	width: 900px;
