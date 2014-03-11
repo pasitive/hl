@@ -420,7 +420,7 @@
 	display: block;
 }
 .content-web-wrap{
-	background: #D5332B url(/img/HL_pattern_color_red.png) no-repeat center;
+	background: #D5332B url(/img/HL_pattern_test_red.png) repeat center;
 
 }
 .content-box li, .content-box p{
@@ -514,7 +514,7 @@
 	overflow: hidden;
 }
 .content-mobile-wrap{
-	background: #954F9F url(/img/HL_pattern_color_violet.png) no-repeat center;
+	background: #954F9F url(/img/HL_pattern_test_violet.png) repeat center;
 }
 .content-mobile .right-side{
 	width: 446px;
@@ -524,16 +524,16 @@
 	background-size: 446px;
 }
 .content-video-wrap{
-	background: #00AE3C url(/img/HL_pattern_color_green.png) no-repeat center;
+	background: #00AE3C url(/img/HL_pattern_test_green.png) repeat center;
 }
 .content-video .right-side{
 	width: 403px;
 	height: 538px;
-	margin: 0 -60px -100px 60px;
-	background: url(/img/happyvideo.png) no-repeat center;
+	margin: 0 -60px -100px 0;
+	background: url(/img/happy_video_images.png) no-repeat -100px 20px;
 }
 .content-seo-wrap{
-	background: #F8AC16 url(/img/HL_pattern_color_orange.png) no-repeat center;
+	background: #F8AC16 url(/img/HL_pattern_test_orange.png) repeat center;
 }
 .content-seo .right-side{
 	width: 446px;
@@ -542,7 +542,7 @@
 	background: url(/img/happyseo.png) no-repeat -40px;
 }
 .content-smm-wrap{
-	background: #0081B3 url(/img/HL_pattern_color_blue.png) no-repeat center;
+	background: #0081B3 url(/img/HL_pattern_test_blue.png) repeat center;
 }
 .content-smm .right-side{
 	width: 434px;
@@ -563,7 +563,7 @@
 }
 .form-bg{
 	width: 100% !important;
-	background: #68CAC8 url(/img/HL_pattern_color_green_happy.png) no-repeat center;
+	background: #68CAC8 url(/img/HL_pattern_test_green_HL.png) repeat center;
 }
 .content-form{
 	width: 900px;
