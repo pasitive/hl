@@ -4,8 +4,8 @@
  *
  */
 
-.content{
-	background: url(/img/background_contact.jpg) no-repeat center;
+html, body{
+	background: #68CAC8 url(/img/HL_pattern_test_green_HL.png) repeat center !important;
 }
 .content-wrap{
 	padding: 0 0 40px 0;

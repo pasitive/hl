@@ -125,6 +125,18 @@
 .mobile-os .sub-footer-toddler {
 	background-image: none !important;
 }*/
+.footer{
+	position: relative !important;
+	bottom: auto !important;
+}
+.sub-footer-toddler {
+	background: #68CAC8 url(/img/HL_pattern_test_green_HL.png) repeat center 0;
+}
+.section-placeholder{
+	width: 100%;
+	min-width: 1000px;
+	background: #68CAC8 url(/img/HL_pattern_test_green_HL.png) repeat center -34px;
+}
 #main{
 	display: none;
 }

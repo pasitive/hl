@@ -273,6 +273,10 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 	box-sizing: border-box;
 	background: url(/img/footer_bg_s.png) 0 0 repeat-x;
 }
+.footer.fixed{
+	position: absolute;
+	bottom: 0;
+}
 .f-top{
 	width: 900px;
 	height: 56px;
