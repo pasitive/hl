@@ -197,6 +197,6 @@ $(function(){
 	$('.prev-p, .next-p').css('top', (window.innerHeight - $('.header').height())/2 - 20);
 
 	/*Fixed footer*/
-	/*$('body').append($('.footer').addClass('fixed'));*/
+	$('.container').css('min-height', window.innerHeight);
 
 });
