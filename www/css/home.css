@@ -534,18 +534,24 @@
 .content-mobile .right-side{
 	width: 446px;
 	height: 446px;
-	margin: 45px 0 -70px -22px;
-	background: url(/img/happymobile.png) no-repeat 0 0;
+	margin: 45px -70px -70px 20px;
+	background: url(/img/happymobile.png) no-repeat -20px 0;
 	background-size: 446px;
 }
 .content-video-wrap{
 	background: #00AE3C url(/img/HL_pattern_test_green.png) repeat center;
 }
 .content-video .right-side{
-	width: 403px;
+	width: 420px;
 	height: 538px;
-	margin: 0 -60px -100px 0;
-	background: url(/img/happy_video_images.png) no-repeat -100px 20px;
+	margin: 0 -60px -100px 20px;
+	background: url(/img/happy_video_images.png) no-repeat -110px 10px;
+}
+.start-video{
+	display: block;
+	height: 400px;
+	width: 380px;
+	margin-top: 80px;
 }
 .content-seo-wrap{
 	background: #F8AC16 url(/img/HL_pattern_test_orange.png) repeat center;
@@ -553,8 +559,8 @@
 .content-seo .right-side{
 	width: 446px;
 	height: 446px;
-	margin: 20px 0 -70px -22px;
-	background: url(/img/happyseo.png) no-repeat -40px;
+	margin: 20px -60px -70px 20px;
+	background: url(/img/happyseo.png) no-repeat -54px -40px;
 }
 .content-smm-wrap{
 	background: #0081B3 url(/img/HL_pattern_test_blue.png) repeat center;
@@ -562,7 +568,7 @@
 .content-smm .right-side{
 	width: 434px;
 	height: 446px;
-	margin: 20px 0 -70px -10px;
+	margin: 20px -30px -70px 20px;
 	background: url(/img/happysmm.png) no-repeat center;
 }
 .content-ask-form-wrap{
@@ -681,7 +687,7 @@ label[for="service"]{
 	margin: 0 auto;
 	line-height: 41px;
 	text-align: center;
-	color: #000;
+	color: #FFF;
 	font-size: 19px;
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	background: url(/img/send_btn.png) no-repeat 0 0;

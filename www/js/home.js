@@ -301,6 +301,9 @@ $(function(){
 		setTimeout(function(){
 			$('html, body').scrollTo({speed:1});
 		}, 500);
+		window.onload = function(){
+			$('html, body').scrollTo({speed:1});
+		};
 		if(isMobile){
 			$('#main').show();
 		} else {
@@ -507,13 +510,19 @@ $(function(){
 		$(this).find('img').fadeIn(100);
 	});
 
-	$('.close_video .close_but').unbind().click(function(e){
+	$('.close_video .close_but, .player-wrap').unbind().click(function(e){
 		e.preventDefault();
-		$('.overlay, .player-wrap').fadeOut('slow');
+		$('.overlay, .player-wrap').fadeOut('slow', function(){
+			//Stop video by player hiding
+			var player = $('.player-box iframe');
+			player.detach();
+			$('.player-box').append(player);
+		});
 	});
 
 	/*happyvideo player*/
-	$('#happyvideo .right-side').click(function(){
+	$('.start-video').click(function(e){
+		e.preventDefault();
 		$('.overlay, .player-wrap').fadeIn('slow');
 	});
 
