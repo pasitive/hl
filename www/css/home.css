@@ -4,6 +4,9 @@
  *
  */
 
+.container{
+	padding-bottom: 0 !important;
+}
 #side-menu {
 	position: fixed;
 	top: 50%;
@@ -1171,4 +1174,26 @@ label[for="service"]{
 }
 .demo-block form input[type="submit"]:hover{
 	background-position: 0 -43px;
+}
+.player-wrap{
+	display: none;
+	position: fixed;
+	top: 220px;
+	left: 0;
+	width: 100%;
+	z-index: 3001;
+}
+.player-box{
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+}
+.player-box iframe{
+	display: block;
+	margin: 0 auto;
+}
+.player-box .close_video{
+	position: absolute;
+	top: -102px;
+	right: 0;
 }

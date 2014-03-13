@@ -154,6 +154,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 .container{
 	position: relative;
 	width: 100%;
+	padding-bottom: 134px;
 	min-width: 1000px;
 }
 .header{
@@ -429,6 +430,8 @@ a.vk {
 }
 .sub-footer-wrap{
 	display: none;
+	position: absolute;
+	top: 100%;
 	width: 100%;
 	min-width: 900px;
 	background-color: #EEE;
@@ -905,7 +908,7 @@ a.vk {
 	left: 0;
 	right: 0;
 	background: url(/img/overlay_bg.png) repeat 0 0;
-	z-index: 200;
+	z-index: 2001;
 }
 .popup-wrap{
 	display: none;
@@ -913,7 +916,7 @@ a.vk {
 	top: 150px;
 	left: 0;
 	width: 100%;
-	z-index: 300;
+	z-index: 3001;
 }
 .popup{
 	width: 660px;

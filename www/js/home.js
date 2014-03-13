@@ -507,6 +507,16 @@ $(function(){
 		$(this).find('img').fadeIn(100);
 	});
 
+	$('.close_video .close_but').unbind().click(function(e){
+		e.preventDefault();
+		$('.overlay, .player-wrap').fadeOut('slow');
+	});
+
+	/*happyvideo player*/
+	$('#happyvideo .right-side').click(function(){
+		$('.overlay, .player-wrap').fadeIn('slow');
+	});
+
 	/*footer shift fix*/
 	setTimeout(function(){
 		$(window).trigger('resize');

@@ -189,7 +189,7 @@ $(function(){
 	});
 
 	$('.overlay, .popup-wrap').click(function(){
-		$('.overlay, .popup-wrap').fadeOut('slow');
+		$('.overlay, .popup-wrap, .player-wrap').fadeOut('slow');
 	});
 
 	$('.about-block .staff-element').staffElement();
@@ -197,6 +197,6 @@ $(function(){
 	$('.prev-p, .next-p').css('top', (window.innerHeight - $('.header').height())/2 - 20);
 
 	/*Fixed footer*/
-	$('.container').css('min-height', window.innerHeight);
+	$('.container').css('min-height', window.innerHeight - 134);
 
 });
