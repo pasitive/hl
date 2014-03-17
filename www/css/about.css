@@ -53,7 +53,7 @@
 	text-align: center;
 	color: #FFF;
 	font-size: 19px;
-	background: url(/img/sprites.png) 0 -3211px no-repeat;
+	background: url(/img/sprites-btn.png) 0 -3211px no-repeat;
 }
 .dl-present-btn:hover{
 	background-position: 0 -3263px;

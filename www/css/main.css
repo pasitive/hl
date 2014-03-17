@@ -973,7 +973,7 @@ a.vk {
 	text-align: center;
 }
 .popup .submit-btn-wrap input{
-	background: url(/img/sprites.png) no-repeat 0 -31px;
+	background: url(/img/sprites-btn.png) no-repeat 0 -31px;
 	margin-top: 10px;
 	background-position: 15px -3465px;
 	height: 48px;
