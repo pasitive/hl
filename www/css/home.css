@@ -7,6 +7,9 @@
 .container{
 	padding-bottom: 0 !important;
 }
+.container.demo-fix{
+	min-height: 0 !important;
+}
 #side-menu {
 	position: fixed;
 	top: 50%;

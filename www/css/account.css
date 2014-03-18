@@ -318,7 +318,7 @@
 .set-range, .report-pdf, .report-csv{
 	display: inline-block;
 	vertical-align: top;
-	height: 34px;
+	height: 33px;
 	width: 112px;
 	line-height: 32px;
 	background: url(/img/acc-sprite.png) no-repeat 0 0;
@@ -356,7 +356,7 @@
 }
 .save-btn{
 	display: inline-block;
-	background: url(/img/sprites.png) no-repeat 0 -31px;
+	background: url(/img/sprites-btn.png) no-repeat 0 -31px;
 	background-position: 15px -3465px;
 	height: 48px;
 	width: 171px;

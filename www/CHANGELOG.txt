@@ -129,3 +129,10 @@ HTML/CSS/JS:
 HTML/CSS/JS:
 
 - Seo/Smm layouts
+
+17-18.03.2014
+
+HTML/CSS/JS:
+
+- Update buttons
+- Embed video player

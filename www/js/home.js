@@ -145,6 +145,12 @@ var position = {},
 
 		$('.actors-block .actors').metafizzyFilter('.actors-sub-menu');
 	},
+	attachDemoHandlers = function(){
+		$('.container').addClass('demo-fix');
+	},
+	detachDemoHandlers = function(){
+		$('.container').removeClass('demo-fix');
+	},
 
 	/*define what need to be shown by the hash*/
 	viewModule = {
@@ -188,7 +194,9 @@ var position = {},
 					}, 500);
 				}
 
+				detachDemoHandlers();
 				attachHomeHandlers();
+
 				viewModule['setState']('main');
 			},
 			'actors': function(data){
@@ -207,8 +215,8 @@ var position = {},
 				}
 
 				attachActorsHandlers();
-
 				detachHomeHandlers();
+
 				viewModule['setState']('actors');
 			},
 			'demo': function(data){
@@ -226,6 +234,8 @@ var position = {},
 				}
 
 				detachHomeHandlers();
+				attachDemoHandlers();
+
 				viewModule['setState']('demo');
 			},
 			'projects': function(data){
