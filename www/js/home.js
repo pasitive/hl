@@ -256,10 +256,10 @@ var position = {},
 					$('#' + project).show();
 					if(isMobile){
 						$('#projects').show();
-						calculateSlideWidth();
 					} else {
 						$('#projects').fadeIn(1000);
 					}
+					calculateSlideWidth();
 
 					setTimeout(function(){
 						//document.body.scrollTop = 0;

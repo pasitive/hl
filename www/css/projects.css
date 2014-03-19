@@ -4,6 +4,244 @@
  *
  */
 
+#projects{
+	display: none;
+}
+#p-web{
+	background-color: #C12E26;
+}
+#p-mobile{
+	background-color: #6A3971;
+}
+#p-video{
+	background-color: #309F41;
+}
+#p-seo{
+	background-color: #EB8D1C;
+}
+#p-smm{
+	background-color: #0072AE;
+}
+#projects > div{
+	display: none;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.content-wrap{
+	position: relative;
+	z-index: 2;
+}
+.nav-wrap{
+	position: fixed;
+	width: 100%;
+	top: 118px;
+	left: 26px;
+	z-index: 10;
+}
+.nav-btns{
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+}
+.prev-p{
+	position: absolute;
+	top: 100px;
+	left: -60px;
+	width: 40px;
+	height: 40px;
+	background: url(/img/sprites.png) -156px -413px no-repeat;
+	z-index: 1000;
+}
+.next-p{
+	position: absolute;
+	top: 100px;
+	right: -20px;
+	width: 40px;
+	height: 40px;
+	background: url(/img/sprites.png) -201px -413px no-repeat;
+	z-index: 1000;
+}
+.close_but_anchor{
+	float: right;
+	margin-right: -20px;
+}
+.close_but{
+	background: url(/img/sprites.png) no-repeat scroll -194px -569px rgba(0, 0, 0, 0);
+	border: medium none;
+	cursor: pointer;
+	height: 40px;
+	margin: 0 0 0 auto;
+	width: 40px;
+	opacity: 0.6;
+}
+.close_but:hover{
+	background: url(/img/sprites.png) no-repeat scroll -149px -569px rgba(0, 0, 0, 0);
+}
+.slide-wrap{
+	position: relative;
+	overflow: hidden;
+}
+.project-item{
+	float: left;
+}
+.bg{
+	background: url(/img/page_project_bg_70percent_transp.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+	bottom: 0;
+	content: "";
+	left: 0;
+	opacity: 0.2;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+.project-block h1{
+	font-size: 35px;
+	font-weight: normal;
+	padding: 30px 0 20px;
+	margin: 0 0 0 20px;
+	color: #FFF;
+}
+.site-url{
+	margin: 30px 0 20px 100px;
+}
+.site-url a{
+	font-size: 15px;
+	color: #FFF;
+	text-decoration: underline;
+}
+.project-block h4{
+	font-size: 17px;
+	font-weight: normal;
+	line-height: 20px;
+	margin-bottom: 10px;
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+	color: #FFF;
+}
+.project-block p{
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
+	color: #FFF;
+}
+.p-slide-item img{
+	width: 900px;
+}
+.p-description{
+	margin: 0 0 40px 20px;
+}
+.p-left{
+	float: left;
+	width: 385px;
+	margin-right: 30px;
+}
+.p-right{
+	float: left;
+	width: 435px;
+}
+.p-right p{
+	margin-bottom: 2px;
+}
+.p-right p span{
+	font-family: 'HelveticaNeueCyrMedium', Helvetica, Arial, sans-serif;
+}
+.p-right .follow-us{
+	margin-top: 25px;
+}
+.p-right .fb{
+	background-position: 0 -1953px;
+}
+.p-right .twitter{
+	background-position: -30px -1953px;
+}
+.p-right .youtube {
+	background-position: -60px -1953px;
+}
+.p-right .vk{
+	background-position: -90px -1953px;
+}
+.ad-block-wrap{
+	position: relative;
+	width: 100%;
+	background-color: #FFF;
+	z-index: 2;
+}
+.ad-block{
+	width: 900px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.ad-paper-wrap, .ad-present-wrap{
+	float: left;
+	text-align: center;
+}
+.ad-pic{
+	display: table-cell;
+	height: 250px;
+	width: 430px;
+	vertical-align: middle;
+}
+.ad-text{
+	font-size: 25px;
+	font-weight: normal;
+	color: #0078bf;
+	cursor: pointer;
+}
+
+.feedback-box {
+	padding: 20px 0 30px;
+	margin-left: 20px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	width: 897.0015999999999px;
+	transition: all 0.1s linear;
+	color: #FFF;
+	overflow: hidden;
+}
+.feedback-box h2{
+	font-size: 25px;
+	font-weight: normal;
+}
+.pers-info-wrap{
+	float: left;
+}
+.pers-info{
+	height: 142px;
+}
+.photo{
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+.data{
+	display: inline-block;
+	vertical-align: bottom;
+}
+.client-name{
+	font-size: 15px;
+	font-family: 'HelveticaNeueCyr-Medium', Helvetica, Arial, sans-serif;
+}
+.client-position, .client-company{
+	font-size: 13px;
+	font-family: 'HelveticaNeueCyr-ThinItalic', Helvetica, Arial, sans-serif;
+}
+.description{
+	font-size: 15px;
+	margin: 0 30px 20px 320px;
+}
+.feedback-btn{
+	text-align: center;
+}
+.feedback-btn a{
+	font-size: 15px;
+	text-decoration: underline;
+	color: #FFF;
+}
 .sub-menu-wrap{
 	width: 100%;
 	margin: 50px 0 30px;
