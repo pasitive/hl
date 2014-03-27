@@ -830,8 +830,17 @@ label[for="service"]{
 	font-family: 'HelveticaNeueCyrLight', Helvetica, Arial, sans-serif;
 	color: #FFF;
 }
+.p-slide-item{
+	margin-bottom: 30px;
+	text-align: center;
+}
 .p-slide-item img{
-	width: 900px;
+	width: 880px;
+	box-shadow: 0 0 30px 0px #000;
+	-webkit-weblit-box-shadow: 0 0 30px 0px #000;
+	-moz-weblit-box-shadow: 0 0 30px 0px #000;
+	-ms-weblit-box-shadow: 0 0 30px 0px #000;
+	-o-weblit-box-shadow: 0 0 30px 0px #000;
 }
 .p-description{
 	margin: 0 0 40px 20px;
